@@ -4,6 +4,7 @@ import AnchorTag from "./anchor";
 import '../styles.css';
 import TabStrip from "./tabStrip";
 import Note from "./note"
+import Button from '@material-ui/core/Button'
 
 export default {
   h1: props => <h1 className='heading1' id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
@@ -17,5 +18,6 @@ export default {
   code: cBlock,
   a: AnchorTag,
   tab: props => <TabStrip {...props} />,
-  note: props => <Note {...props} />
+  note: props => <Note {...props} />,
+  button: props => <Button {...props} />
 };
