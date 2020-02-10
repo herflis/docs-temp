@@ -4,6 +4,3 @@ export ThemeProvider from "./themeProvider";
 export Layout from "./layout";
 export Link from "./link";
 
-if (window === undefined || !window) {
-  require('localstorage-polyfill');
-}

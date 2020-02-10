@@ -8,6 +8,11 @@ import RightSidebar from "./rightSidebar";
 import LanguageMenu from './languageMenu';
 import {LanguageContext} from '../context/LanguageContext'
 
+
+if (window === undefined || !window) {
+  require('localstorage-polyfill');
+}
+
 const Wrapper = styled('div')`
   display: flex;
   justify-content: space-between;
@@ -47,7 +52,10 @@ const Layout = ({ children, location }) => {
 
 
   const toggleLanguage = (lang) => {
-    localStorage.setItem('chosenLanguage', lang)
+    if (window) {
+      localStorage.setItem('chosenLanguage', lang)
+     }
+
     setState(state => ({
       lang: lang,
       toggleLanguage
@@ -55,7 +63,7 @@ const Layout = ({ children, location }) => {
   };
 
   const [state, setState] = React.useState({
-    lang: localStorage.getItem('chosenLanguage') ? localStorage.getItem('chosenLanguage') : `REST`,
+    lang: localStorage && localStorage.getItem('chosenLanguage') ? localStorage.getItem('chosenLanguage') : `REST`,
     toggleLanguage: toggleLanguage,
   });
 
