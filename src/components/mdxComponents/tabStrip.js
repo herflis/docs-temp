@@ -81,7 +81,7 @@ const TabStrip = (props) => {
     toggleLanguage(langs[newValue].name)
   };
 
-  const path = `${props.category}/${props.article}`
+  const path = `${props.category}/${props.article}/`
 
   const classes = useStyles();
   return(
@@ -148,7 +148,8 @@ const sortNodes = (nodes) => {
 const getRelatedNodes = (nodes, example, article) => {
   const a = []
   nodes.map(node => {
-    if (node.relativeDirectory.indexOf(example) > -1 && node.relativeDirectory.indexOf(article) > -1) {
+    const pathArray = node.relativeDirectory.split('/')
+    if (pathArray[1] === example && pathArray[0] === article) {
       a.push(node)
     }
   })
