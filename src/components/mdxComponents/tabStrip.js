@@ -121,8 +121,6 @@ const TabStrip = (props) => {
         </Tabs>
         {
         getRelatedNodes(data.allExample.nodes, props.example, props.article).map((node, i) => {
-          console.log(node.name)
-          console.log(node.internal.content)
           return (<TabPanel key={`${node.name}`} value={langs.findIndex(l => l.name === lang)} index={i} dir={theme.direction}>{node.internal.content}</TabPanel>)
           }
         )
