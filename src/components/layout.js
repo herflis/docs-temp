@@ -8,11 +8,6 @@ import RightSidebar from "./rightSidebar";
 import LanguageMenu from './languageMenu';
 import {LanguageContext} from '../context/LanguageContext'
 
-
-if (window === undefined || !window) {
-  require('localstorage-polyfill');
-}
-
 const Wrapper = styled('div')`
   display: flex;
   justify-content: space-between;
@@ -52,7 +47,7 @@ const Layout = ({ children, location }) => {
 
 
   const toggleLanguage = (lang) => {
-    if (window) {
+    if (localStorage) {
       localStorage.setItem('chosenLanguage', lang)
      }
 
