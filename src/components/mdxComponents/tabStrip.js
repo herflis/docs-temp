@@ -1,0 +1,158 @@
+import * as React from "react";
+import PropTypes from 'prop-types';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import langs from './langs'
+import { StaticQuery, graphql } from "gatsby"
+import ReactMarkdown from "react-markdown";
+import CodeBlock from "./cBlock";
+import CopyToClipBoard from "./CopyToClipBoard"
+import {LanguageContext} from '../../context/LanguageContext'
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+    display: 'flex',
+    height: 224,
+    backgroundColor: 'rgb(245, 242, 240)',
+    position: 'relative'
+  },
+  tabs: {
+    borderRight: `1px solid ${theme.palette.divider}`,
+  },
+  tab: {
+    minWidth: '120px',
+    fontSize: '0.775rem',
+    minHeight: '40px'
+  },
+  panel: {
+    marginTop: '20px',
+    paddingLeft: '10px',
+    width: '625px',
+    overflow: 'auto',
+  }
+}));
+
+const TabPanel = (props) => {
+  const { children, value, index, ...other } = props;
+  const classes = useStyles();
+  return (
+    <Typography
+      component="div"
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+      className={classes.panel}
+    >
+      {value === index && <Box>
+        <ReactMarkdown
+    source={children}
+    renderers={{ code: CodeBlock }}
+/>
+</Box>}
+    </Typography>
+  );
+}
+
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+const a11yProps = (index) => {
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
+  };
+}
+
+const TabStrip = (props) => {
+  const theme = useTheme();
+  const handleChange = (newValue, toggleLanguage) => {
+    setValue(newValue);
+    toggleLanguage(langs[newValue].name)
+  };
+
+  const path = `${props.category}/${props.article}`
+
+  const classes = useStyles();
+  return(
+    <StaticQuery
+    query={graphql`
+    query FileByCategoryandArticle {
+      allExample {
+        nodes {
+          internal {
+            content
+          }
+          relativeDirectory
+          name
+        }
+      }
+    }
+    `}
+    render={(data) =>
+    <LanguageContext.Consumer>
+      {({lang, toggleLanguage}) => (
+    <div className={classes.root}>
+        <CopyToClipBoard  />
+        <Tabs
+          value={langs.findIndex(l => l.name === lang)}
+          onChange={(event, value) => toggleLanguage(langs[value].name)}
+          indicatorColor="primary"
+          textColor="primary"
+          orientation="vertical"
+          variant="scrollable"
+          className={classes.tabs}
+        >
+            { langs.map((lang, index) =>{
+               return <Tab className={classes.tab} disableRipple label={lang.title} {...a11yProps(lang.name)} key={`${lang.name}-tab`} />
+              }
+               )
+          }
+        </Tabs>
+        {
+        getRelatedNodes(data.allExample.nodes, props.example, props.article).map((node, i) => {
+          console.log(node.name)
+          console.log(node.internal.content)
+          return (<TabPanel key={`${node.name}`} value={langs.findIndex(l => l.name === lang)} index={i} dir={theme.direction}>{node.internal.content}</TabPanel>)
+          }
+        )
+      }
+    </div>
+      )}
+    </LanguageContext.Consumer>
+    }
+  />
+  )
+}
+
+export default TabStrip
+
+const sortNodes = (nodes) => {
+  const a = []
+  nodes.map(node => {
+    const index = langs.findIndex(lang => lang.name === node.name)
+    a[index] = node
+  })
+  return a
+}
+
+
+const getRelatedNodes = (nodes, example, article) => {
+  const a = []
+  nodes.map(node => {
+    if (node.relativeDirectory.indexOf(example) > -1 && node.relativeDirectory.indexOf(article) > -1) {
+      a.push(node)
+    }
+  })
+  return sortNodes(a)
+}
