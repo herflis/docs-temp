@@ -1,3 +1,3 @@
 ```javascript
-dispatch(Actions.getProperty("/Root/Content", "DisplayName"))
+store.dispatch(Actions.getProperty("/Root/Content", "DisplayName"))
 ```
