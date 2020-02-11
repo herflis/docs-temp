@@ -8,7 +8,7 @@ metaDescription: "Basic concepts behind sensenet API"
 
 sensenet offers you a rich API allowing you to manage, integrate and deliver content on all types of clients, devices and platforms. This section explains the API structure and main concepts in more depth.
 
-The Content Repository is an [OData](https://www.odata.org/) producer which means your application can consume our [OData](https://www.odata.org/) service to create web and mobile apps or any other type of content based applications. It supports CRUD operations, properties, binary streams, paging options, custom queries and many more.
+Our API is an [OData](https://www.odata.org/) producer which means your application can consume our [OData](https://www.odata.org/) service to create web and mobile apps or any other type of content based applications. It supports CRUD operations, properties, binary streams, paging options, custom queries and many more.
 
 The requested resource can be any content in the repository (since everything is a content in sensenet, it could be really anything) that is permitted for the current user.
 
@@ -28,7 +28,7 @@ https:/example.com/OData.svc/[CONTENTPATH]
 
 # Query options
 
-Query options are query string parameters a client may specify to control the amount and order of the data that a service returns for the resource identified by the URI. In sensenet there're two types of query options available [OData System Query Options](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) and custom sensenet query options. The OData standard query options' names are prefixed with a "$" character, sensenet query options should be used without a prefix.
+Query options are query string parameters a client may specify to control the amount and order of the data that a service returns for the resource identified by the URI. In sensenet there're two types of query options available [OData System Query Options](https://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part2-url-conventions.html#sec_URLComponents) and custom sensenet query options. The OData standard query options' names are prefixed with a "$" character, sensenet query options should be used without a prefix.
 
 | option |     |
 | ------ | --- |
