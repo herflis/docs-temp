@@ -37,7 +37,16 @@ const config = {
       "/permissions",
       "/sharing",
       "/preview"
-		],
+    ],
+    "collapsedNav": [
+      "/querying",
+      "/content-management",
+      "/collaboration",
+      "/users-and-groups",
+      "/permissions",
+      "/sharing",
+      "/preview"
+    ],
 		"links": [
       { "text": "Contact", "link": "https://sensenet.com/contact"},
       { "text": "Blog", "link": "https://blog.sensenet.com"},
