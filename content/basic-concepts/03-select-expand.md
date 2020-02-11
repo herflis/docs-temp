@@ -56,8 +56,8 @@ Additionally, you may expand the following special fields as well:
 
 - `AllowedChildTypes`: list of available content types in a container
 
-<tab category="basic-concepts" article="select-expand" example="expandActions" />
+<tab category="basic-concepts" article="select-expand" example="expandAllowedChildTypes" />
 
 - `Actions`: list of available HTML actions
 
-<tab category="basic-concepts" article="select-expand" example="expandAllowedChildTypes" />
+<tab category="basic-concepts" article="select-expand" example="expandActions" />

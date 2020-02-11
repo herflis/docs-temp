@@ -1,3 +1,3 @@
 ```javascript
-dispatch(Actions.loadcontent(1284))
+store.dispatch(Actions.loadcontent(1284))
 ```

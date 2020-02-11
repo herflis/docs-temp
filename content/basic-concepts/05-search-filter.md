@@ -1,7 +1,7 @@
 ---
-title: Searching and filtering
-metaTitle: "sensenet API - Searching and filtering"
-metaDescription: "Searching and filtering through sensenet API"
+title: Search and filtering
+metaTitle: "sensenet API - Search and filtering"
+metaDescription: "Search and filtering through sensenet API"
 ---
 
 # Search and filtering
