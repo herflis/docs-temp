@@ -4,9 +4,9 @@ metaTitle: "sensenet API - Basic concepts"
 metaDescription: "Basic concepts behind sensenet API"
 ---
 
-# Inroduction to sensenet REST API
+# Introduction to sensenet REST API
 
-sensenet offers you a rich API allowing you to manage, integrate and deliver content on all types of clients, devices and platforms. This section explains the API structure and main concepts in more depth.
+Sensenet offers you a rich API allowing you to manage, integrate and deliver content on all types of clients, devices and platforms. This section explains the API structure and main concepts in more depth.
 
 The Content Repository is an [OData](https://www.odata.org/) producer which means your application can consume our [OData](https://www.odata.org/) service to create web and mobile apps or any other type of content based applications. It supports CRUD operations, properties, binary streams, paging options, custom queries and many more.
 
