@@ -139,7 +139,7 @@ a:hover {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: #542683;
+  background-color: #bde4e1;
 }
 
 .headerWrapper {
@@ -422,14 +422,23 @@ pre {
 }
 
 .hideFrontLine  .active >a{
-  background-color: #542683;
+  background-color: #29a59b;
   color: #fff !important;
 }
 .firstLevel ul li .collapser svg path {
+  fill: rgba(0, 0, 0, 0.87) !important;
+}
+
+.firstLevel ul li.active .collapser svg path {
   fill: #fff !important;
 }
+
+.firstLevel ul li>a:hover .collapser svg path {
+  fill: rgba(0, 0, 0, 0.87) !important;
+}
+
 .active .collapser >svg >path {
-  fill: #663399 !important;
+  fill: rgba(0, 0, 0, 0.87) !important;
 }
 
 .showFrontLine .firstLevel ul .item ul .item {
@@ -441,7 +450,7 @@ pre {
   padding: 0;
 }
 .sideBarUL .item >a {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -451,14 +460,14 @@ pre {
   padding-left: 15px;
 }
 .sideBarUL .item>a:hover {
-  background-color: #542683;
-  color: #fff !important;
+  background-color: #bde4e1;
+  color: rgba(0, 0, 0, 0.87) !important;
 }
 .showFrontLine .item >a:hover {
-  background-color: #542683;
+  background-color: #bde4e1;
 }
 .showFrontLine .active >a {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.87);
   background-color: #473485;
 }
 
@@ -481,7 +490,7 @@ pre {
   border-color: rgb(230,236,241) !important;
   border-style: solid none solid solid;
   border-width: 1px 0px 1px 1px;
-  background-color: #542683;
+  background-color: #bde4e1;
   color: #fff;
 }
 
@@ -497,7 +506,7 @@ pre {
   font-size: 32px;
   line-height: 1.5;
   font-weight: 500;
-  border-left: 2px solid rgb(116, 76, 188);
+  border-left: 2px solid #29a59b;
   padding: 0 16px;
   flex: 1;
   margin-top: 0;
