@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$top=5
+https://dev.demo.sensenet.com/OData.svc/Root/Content/IT/Document_Library?$filter=isof('Folder')
 ```

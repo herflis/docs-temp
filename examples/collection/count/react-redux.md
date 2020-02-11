@@ -1,3 +1,3 @@
 ```javascript
-dispatch(Actions.getChildrenCount("/Root/Content"))
+store.dispatch(Actions.getChildrenCount("/Root/Content/IT"))
 ```
