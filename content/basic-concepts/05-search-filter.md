@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Searching and filtering"
 metaDescription: "Searching and filtering through sensenet API"
 ---
 
-# Searching and filtering
+# Search and filtering
 
 You can use a variety of query parameters to search and filter items in the response from any collection including folders, documents, images, content types, users or any other content with built-in or custom content type.
 

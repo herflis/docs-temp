@@ -4,7 +4,7 @@ metaTitle: sensenet API - Actions
 metaDescription: Working with actions
 ---
 
-# Using actions
+# Discovering actions
 
 Every content has executable actions in the sensenet content repository managed by the Action Framework. List of these actions are available via the `Actions` OData property. As it was mentioned at the [`$expand` option's section](/basic-concepts/03-select-expand/#expand) the `Actions` property's value can be expanded to get its children like a collection of actions and functions with all of their own properties.
 
