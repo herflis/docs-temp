@@ -5,6 +5,8 @@ import '../styles.css';
 import TabStrip from "./tabStrip";
 import Note from "./note"
 import Button from '@material-ui/core/Button'
+import { blue } from '@material-ui/core/colors';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 export default {
   h1: props => <h1 className='heading1' id={props.children.replace(/\s+/g, '').toLowerCase()} {...props} />,
@@ -19,5 +21,11 @@ export default {
   a: AnchorTag,
   tab: props => <TabStrip {...props} />,
   note: props => <Note {...props} />,
-  button: props => <Button {...props} />
+  button: props => <ThemeProvider theme={theme}><Button {...props} /></ThemeProvider>
 };
+
+const theme = createMuiTheme({
+  palette: {
+    primary: blue,
+  },
+});
