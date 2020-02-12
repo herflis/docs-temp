@@ -68,7 +68,7 @@ const Layout = ({ children, location }) => {
     <LanguageContext.Provider value={state}>
       <LanguageMenu />
       <Wrapper>
-        <LeftSideBarWidth className={'hiddenMobile'}>
+        <LeftSideBarWidth className={'hiddenMobile leftSideBar'}>
           <Sidebar location={location} />
         </LeftSideBarWidth>
         <Content>

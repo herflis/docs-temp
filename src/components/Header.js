@@ -4,6 +4,8 @@ import GitHubButton from 'react-github-btn'
 import Link from './link';
 import './styles.css';
 import config from '../../config.js';
+import { faGitter, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import Loadable from 'react-loadable';
 import LoadingProvider from './mdxComponents/loading';
@@ -101,7 +103,7 @@ const Header = ({location}) => (
                   }
                 })}
                 {helpUrl !== '' ?
-                  (<li><a href={helpUrl}><img src={help} alt={'Help icon'}/></a></li>) : null
+                  (<li><a href={helpUrl}><FontAwesomeIcon icon={faGitter} /></a></li>) : null
                 }
                 {(tweetText !== '' || githubUrl !== '') ?
                   (<li className="divider hiddenMobile"></li>): null
@@ -109,7 +111,7 @@ const Header = ({location}) => (
                 {tweetText !== '' ?
                   (<li>
                     <a href={'https://twitter.com/intent/tweet?&text=' + tweetText} target="_blank" rel="noopener">
-                      <img className={'shareIcon'} src={twitter} alt={'Twitter'} />
+                    <FontAwesomeIcon icon={faTwitter} />
                     </a>
                    </li>) : null
                 }

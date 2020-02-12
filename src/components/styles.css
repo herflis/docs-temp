@@ -39,7 +39,7 @@ html, body {
 
 a {
   transition: color 0.15s;
-  color: #663399;
+  color: rgb(19, 165, 173);
 }
 
 
@@ -225,9 +225,9 @@ a:hover {
 }
 .headerTitle {
   height: auto;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.87) !important;
 }
 .headerTitle a {
@@ -283,7 +283,7 @@ a:hover {
 }
 
 .navBarBrand img {
-  width: 40px;
+  width: 30px;
   margin-right: 16px;
   display: inline-block;
 }
@@ -296,7 +296,7 @@ a:hover {
 .navBarUL li a {
   font-family: 'Roboto';
   color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1em;
   opacity: 1;
@@ -370,7 +370,7 @@ pre {
 }
 
 .sideBarUL li a {
-  color: #fff;
+  color: rgb(19, 165, 173);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -468,7 +468,7 @@ pre {
 }
 .showFrontLine .active >a {
   color: rgba(0, 0, 0, 0.87);
-  background-color: #473485;
+  background-color: rgb(19, 165, 173);
 }
 
 .sideBarUL  .item .item{
@@ -646,13 +646,19 @@ pre {
 }
 
 .nextBtn:hover, .previousBtn:hover {
-  color: rgb(116, 76, 188);
+  color: rgb(19, 165, 173);
   text-decoration: none;
-  border: 1px solid rgb(116, 76, 188);
+  border: 1px solid rgb(19, 165, 173);
 }
 
 .nextBtn:hover .rightArrow, .previousBtn:hover .leftArrow {
-  color: rgb(116, 76, 188);
+  color: rgb(19, 165, 173);
+}
+
+.leftSideBar {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
+  box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
 }
 
 /* tables.css */

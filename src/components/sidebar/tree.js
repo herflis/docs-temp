@@ -95,6 +95,7 @@ const Tree = ({edges}) => {
       setCollapsed={toggle}
       collapsed={collapsed}
       {...treeData}
+
     />
   );
 }

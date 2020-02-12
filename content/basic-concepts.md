@@ -60,7 +60,7 @@ The following HTTP methods can be used in requests to specify the expected opera
 
 sensenet currently supports only the [OData Verbose JSON response format](https://www.odata.org/documentation/odata-version-3-0/json-verbose-format/), so the API response for a sensenet collection will look like the following:
 
-```
+```json
 {
   "d": {
     "__count": 10,
