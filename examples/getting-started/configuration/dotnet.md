@@ -1,3 +1,3 @@
 ```
-
+No additional configurations needed
 ```
