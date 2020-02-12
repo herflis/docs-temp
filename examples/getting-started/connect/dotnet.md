@@ -1,8 +1,8 @@
-```
+```csharp
 // define service url and access credentials (basic authentication)
 ClientContext.Current.AddServer(new ServerContext
 {
-    Url = "https://dev.demo.sensenet.com", 
+    Url = "https://dev.demo.sensenet.com",
     Username = "builtin\\admin",
     Password = "admin"
 });
