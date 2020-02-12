@@ -6,7 +6,7 @@ metaDescription: "How to work with a selection of metadata and referenced conten
 
 # Select and expand fields
 
-Sensenet OData API gives you full control over the amount of metadata you are working allowing you to reduce the size of data response and load the value of only those fields which are needed.
+sensenet OData API gives you full control over the amount of metadata you are working allowing you to reduce the size of data response and load the value of only those fields which are needed.
 
 Expanding a field lets you work with referenced content's metadata, which means if you're looking for the creator users avatar or the path of a related content you don't have to send another request to the user or the document, but to expand the field.
 
