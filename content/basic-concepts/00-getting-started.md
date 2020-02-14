@@ -26,7 +26,7 @@ Now, let's take a look at how to connect the chosen content repository with your
 
 # Include the dependencies
 
-Let's add the following dependencies to your project.
+Let's add the following dependencies to your project. Lorem ipsum
 
 <tab category="basic-concepts" article="getting-started" example="dependencies" />
 
