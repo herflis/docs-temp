@@ -38,10 +38,6 @@ Let's add the following dependencies to your project.
 
 Followings should be created for using the API calls
 
-- create `Repository`
-- create `Content` object
-- create `RESTCaller`
-
 <tab category="basic-concepts" article="getting-started" example="configuration" />
 
 
