@@ -26,7 +26,7 @@ Now, let's take a look at how to connect the chosen content repository with your
 
 # Include the dependencies
 
-Let's add the following dependencies to your project. Lorem ipsum
+Let's add the following dependencies to your project.
 
 <tab category="basic-concepts" article="getting-started" example="dependencies" />
 
@@ -39,5 +39,4 @@ Let's add the following dependencies to your project. Lorem ipsum
 Followings should be created for using the API calls
 
 <tab category="basic-concepts" article="getting-started" example="configuration" />
-
 
