@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Basic concepts"
 metaDescription: "Basic concepts behind sensenet API"
 ---
 
-# Inroduction to sensenet REST API
+# Introduction to sensenet REST API
 
 sensenet offers you a rich API allowing you to manage, integrate and deliver content on all types of clients, devices and platforms. This section explains the API structure and main concepts in more depth.
 
