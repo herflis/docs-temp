@@ -411,7 +411,7 @@ pre {
   padding: 7px 24px 7px 16px;
 }
 
-.hideFrontLine .collapser {
+.showFrontLine .collapser, .hideFrontLine .collapser {
   background: transparent;
   border: none;
   outline: none;
@@ -421,7 +421,7 @@ pre {
   cursor: pointer;
 }
 
-.hideFrontLine  .active >a{
+.showFrontLine  .active >a, .hideFrontLine  .active >a{
   background-color: #29a59b;
   color: #fff !important;
 }
@@ -463,13 +463,13 @@ pre {
   background-color: #bde4e1;
   color: rgba(0, 0, 0, 0.87) !important;
 }
-.showFrontLine .item >a:hover {
+/* .showFrontLine .item >a:hover {
   background-color: #bde4e1;
 }
 .showFrontLine .active >a {
   color: rgba(0, 0, 0, 0.87);
   background-color: rgb(19, 165, 173);
-}
+} */
 
 .sideBarUL  .item .item{
   margin-left: 16px;
@@ -481,7 +481,7 @@ pre {
 
 .showFrontLine  .item .item {
   border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
+  border-left-color: rgba(0, 0, 0, 0.87);
   padding: 0;
   width: calc(100% - 16px) !important;
 }
@@ -490,8 +490,8 @@ pre {
   border-color: rgb(230,236,241) !important;
   border-style: solid none solid solid;
   border-width: 1px 0px 1px 1px;
-  background-color: #bde4e1;
-  color: #fff;
+  /* background-color: #bde4e1; */
+  /* color: #fff; */
 }
 
 .titleWrapper {
