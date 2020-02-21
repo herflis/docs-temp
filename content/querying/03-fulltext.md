@@ -10,4 +10,4 @@ In sensenet content repository you are able to search in any metadata fields of 
 
 Following query results every content that has the word *Lorem* in one of its indexed fields (e.g. DisplayName, Description or uploaded file's content):
 
-<tab category="querying" article="fulltext" example="fullText" />
+<tab category="querying" article="querying" example="fullText" />

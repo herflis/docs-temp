@@ -1,7 +1,7 @@
 ---
 title: Query by date
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Query by date"
+metaDescription: "Query by date"
 ---
 
 # Query by date

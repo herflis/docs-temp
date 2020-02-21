@@ -4,8 +4,6 @@ metaTitle: "sensenet API - Query by Id or Path"
 metaDescription: "How to query content by Id or Path"
 ---
 
-# Query by Id or Path
-
 Let's see what all you need to query a document by its `Id` or `Path`.
 
 # Query a content by its Id
