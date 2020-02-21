@@ -5,6 +5,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 import langs from './mdxComponents/langs';
 import {LanguageContext} from '../context/LanguageContext';
+import { faWindows, faReact, faJsSquare } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const useStyles = makeStyles(theme => ({
   menuButton: {
@@ -23,35 +25,84 @@ const useStyles = makeStyles(theme => ({
     borderRight: 'solid 1px #eee',
     borderRadius: '0px',
     padding: '10px 20px',
-    fontWeight: 'normal'
+    fontWeight: 'normal',
+    textTransform: 'none',
+    minHeight: '64px'
   },
   active: {
     borderRight: 'solid 1px #eee',
     borderRadius: '0px',
     padding: '10px 20px',
-    fontWeight: 500
+    fontWeight: 'normal',
+    textTransform: 'none',
+    background: '#fff',
+    minHeight: '64px',
+  },
+  icon: {
+    marginRight: '.5em',
+    opacity: .8,
+    color: 'rgba(0, 0, 0, 0.87)',
+    maxHeight: '1em',
+    lineHeight: '1em'
+  },
+  iconActive: {
+    marginRight: '.5em',
+    color: '#13a5ad',
+    opacity: .8,
+    maxHeight: '1em',
+    lineHeight: '1em'
   }
 }));
+
+
 
 const LanguageMenu = (props) => {
   const classes = useStyles();
 
-
-  const isActive = (lang, name) => lang === name;
-
   return (
 <div className={classes.wrapper}>
-      <AppBar position="static" style={{ background: '#ffffff', color: '#13a5ad'}}>
+      <AppBar position="static" style={{ background: '#eee', color: 'rgba(0, 0, 0, 0.87)'}}>
         <Toolbar>
-          {langs.map(l =>
-          <LanguageContext.Consumer key={`langMenu-${l.name}`}>
+          {langs.map(l =>{
+
+            const isActive = (lang, name) => lang === name;
+            const icon = (lang, l) => {
+              let i = `{ }`
+              switch (l){
+                case 'dotnet':
+                  i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faWindows} />
+                  break
+                case 'reactjs':
+                  i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faReact} />
+                  break
+                case 'js':
+                    i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faJsSquare} />
+                    break
+                case 'REST':
+                  i = <span className={isActive(lang, l) ? classes.iconActive : classes.icon}>{`{ }`}</span>
+                  break
+                case 'react-redux':
+                    i = <span class={isActive(lang, l) ? 'snIcon active redux' : "snIcon redux"}></span>
+                    break
+                case 'js-snclient':
+                      i = <span class={isActive(lang, l) ? 'snIcon active sensenet' : "snIcon sensenet"}></span>
+                      break
+                default:
+                  i = <FontAwesomeIcon className={isActive(lang, l) ? classes.iconActive : classes.icon} icon={faJs} />
+                  break
+              }
+              return i
+            }
+          return <LanguageContext.Consumer key={`langMenu-${l.name}`}>
             {({lang, toggleLanguage}) => {
               return (
               <Button color="inherit" className={isActive(lang, l.name) ? classes.active : classes.button} onClick={() => toggleLanguage(l.name)}>
+                {icon(lang, l.name)}
                 {l.title}
               </Button>
             )}}
           </LanguageContext.Consumer>
+          }
           )}
         </Toolbar>
       </AppBar>
