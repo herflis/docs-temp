@@ -53,7 +53,7 @@ const config = {
       { "text": "Community", "link": "https://community.sensenet.com"},
       { "text": "Careers", "link": "https://jobs.sensenet.com"},
 		],
-		"frontline": false,
+		"frontline": true,
 		"ignoreIndex": true,
 	},
 	"siteMetadata": {
