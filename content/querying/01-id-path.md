@@ -10,13 +10,13 @@ Let's see what all you need to query a document by its `Id` or `Path`.
 
 Following example shows how to query the document with the `Id` `1607`.
 
-<tab category="querying" article="querying-id-path" example="byId" />
+<tab category="querying" article="query-by-id-path" example="byId" />
 
 # Query multiple content by their Ids
 
 The next example shows how to query multiple documents by Id's `1607`, `1640` and `1645`.
 
-<tab category="querying" article="querying-id-path" example="byMultipleIds" />
+<tab category="querying" article="query-by-id-path" example="byMultipleIds" />
 
 # Search in a folder
 
@@ -24,7 +24,7 @@ You can specify a folder to search in with using `InFolder` param and the chosen
 
 Following query returns the children of the folder names Calgary:
 
-<tab category="querying" article="querying-id-path" example="inFolder" />
+<tab category="querying" article="query-by-id-path" example="inFolder" />
 
 # Search in a branch of the content tree
 
@@ -32,4 +32,4 @@ You can also specify a branch of the content repository to search in using the `
 
 Following query returns all the content items which are stored in the IT workspace's document library even if they are stored in lower level folders:
 
-<tab category="querying" article="querying-id-path" example="inTree" />
+<tab category="querying" article="query-by-id-path" example="inTree" />

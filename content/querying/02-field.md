@@ -22,20 +22,20 @@ In the following examples you will see how you can query by the most common fiel
 
 The following query returns the content that's Name is BusinessPlan.docx
 
-<tab category="querying" article="querying-by-field" example="byShortText" />
+<tab category="querying" article="query-by-field" example="byShortText" />
 
 Following query returns the content that's Description field contains the word 'company' (notice that it is actually a [wildcard search](/querying#wildcardsearch))
 
-<tab category="querying" article="querying-by-field" example="byLongText" />
+<tab category="querying" article="query-by-field" example="byLongText" />
 
 # Query by a number field
 
 Following example shows how to get the list of task that's completions rate is lower than 50% (their Completion field's value is less than 50):
 
-<tab category="querying" article="querying-by-field" example="byNumber" />
+<tab category="querying" article="query-by-field" example="byNumber" />
 
 # Query by a boolean field
 
 You can also query by a boolean field as it is shown in the following example which query returns the list of critical workspaces (e.g. content that's IsCritical field's value is `true`)
 
-<tab category="querying" article="querying-by-field" example="byBoolean" />
+<tab category="querying" article="query-by-field" example="byBoolean" />

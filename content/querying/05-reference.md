@@ -1,5 +1,5 @@
 ---
-title: Query by content relationship
+title: Query by related content
 sidebar: ApiDocs
 showTitle: false
 ---
