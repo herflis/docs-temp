@@ -16,6 +16,12 @@ Basically query by a field works by adding the chosen field name to the query wi
 
 ```query=[FieldName]:[value]```
 
+Field names are always case sensitive but values are not. The following queries returns the same result:
+
+```query=Name:saturn```
+&nbsp;
+```query=Name:SaTUrn```
+
 In the following examples you will see how you can query by the most common fields.
 
 # Query by a text field
