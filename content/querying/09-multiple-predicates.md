@@ -1,7 +1,7 @@
 ---
 title: Multiple predicates
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Multiple predicates"
+metaDescription: "Query by multiple predicates"
 ---
 
 # Operators

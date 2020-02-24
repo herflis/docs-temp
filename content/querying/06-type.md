@@ -1,7 +1,7 @@
 ---
 title: Query by Type
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Query by Type"
+metaDescription: "Query by Type"
 ---
 
 Since sensenet supports content type inheritance there are two ways to query items by their types.

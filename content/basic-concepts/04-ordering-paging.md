@@ -6,7 +6,7 @@ metaDescription: "Order content with sensenet API"
 
 # Ordering and pagination for results
 
-There are a couple of query options that give you control over how your results and how they are ordered. With them you can not only able to create collection results that are sorted in the required order but to implement paging functionality using the `$top` and `$skip` options.
+There are a couple of query options that gives you control over your results and how they are ordered. With them you can not only able to create collection results that are sorted in the required order but to implement paging functionality using the `$top` and `$skip` options.
 
 # Ordering
 

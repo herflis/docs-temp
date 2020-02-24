@@ -1,7 +1,7 @@
 ---
 title: Template parameters
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Template parameters"
+metaDescription: "Using template parameters"
 ---
 
 # Using template parameters
