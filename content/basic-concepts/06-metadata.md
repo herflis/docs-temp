@@ -8,7 +8,7 @@ metaDescription: Metadata OData option
 
 This option controls the metadata content in output entities. It is invented for development purposes, most of the cases setting its value to reduced or hidden is sufficient and it also improves output readability.
 
-There are three type of values:
+There are three types of metadata:
 
 - **full** (default): the output contains the whole metadata.
 - **minimal**: output's entity metadata contains only self URI and type name (actions and functions are hidden).

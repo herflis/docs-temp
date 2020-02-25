@@ -6,7 +6,7 @@ metaDescription: "Order content with sensenet API"
 
 # Ordering the results
 
-There are a couple of query options that gives you control over how your results and how they are ordered.
+There are a couple of query options that gives you control over how your results are ordered.
 
 Two keywords exist for defining sorting in a query text:
 
@@ -39,7 +39,7 @@ Following query example shows how to order results by multiple fields, in this c
 
 # Order by multiple fields in different directions
 
-In the following examples we combine all the things above with sorting folder first by their Name and then by their index in reverse order.
+In the following examples we combine all the things above with sorting folders first by their Name and then by their index in reverse order.
 
 <tab category="querying" article="query-ordering" example="multipleFieldsAndDirections" />
 

@@ -6,7 +6,7 @@ metaDescription: "Query by a field"
 
 # Define queryable fields
 
-You can define which fields should be saved to the index with mark them in the related content type at the chosen field's definition.
+You can define which fields should be saved to the index by marking them in the related content type at the chosen field's definition.
 
 It is also possible to switch off indexing for certain content types. In that case nobody will be able to find the instances made with those content types using queries, and the index will be smaller.
 
@@ -16,7 +16,7 @@ Basically query by a field works by adding the chosen field name to the query wi
 
 ```query=[FieldName]:[value]```
 
-Field names are always case sensitive but values are not. The following queries returns the same result:
+Field names are always case sensitive but values are not. The following queries return the same result:
 
 ```query=Name:saturn```
 &nbsp;
@@ -36,12 +36,12 @@ Following query returns the content that's Description field contains the word '
 
 # Query by a number field
 
-Following example shows how to get the list of task that's completions rate is lower than 50% (their Completion field's value is less than 50):
+Following example shows how to get the list of tasks that's completion rate is lower than 50% (their Completion field's value is less than 50):
 
 <tab category="querying" article="query-by-field" example="byNumber" />
 
 # Query by a boolean field
 
-You can also query by a boolean field as it is shown in the following example which query returns the list of critical workspaces (e.g. content that's IsCritical field's value is `true`)
+You can also query by a boolean field as it is shown in the following example. The query returns the list of critical workspaces (e.g. content that's IsCritical field's value is `true`).
 
 <tab category="querying" article="query-by-field" example="byBoolean" />

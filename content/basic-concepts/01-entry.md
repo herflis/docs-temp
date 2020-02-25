@@ -44,7 +44,7 @@ Raw value of a property can be accessed if the request is extended with the `/$v
 
 <tab category="basic-concepts" article="entry" example="propertyValue" />
 
-This returns with the following response:
+This returns the following response:
 
 ```Document Workspaces```
 
