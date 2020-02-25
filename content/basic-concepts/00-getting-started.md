@@ -16,7 +16,7 @@ Next you'll need to model your content, create your custom types, and publish so
 
 # Try out sensenet with one of the demo repositories
 
-You can start exploring one of our demo repositories filled with various demo content, just log in and you are ready to go! There is no need for registration.
+You can start exploring one of our demo repositories filled with various demo content, just log in and you are ready to go! No registration required.
 
 These environments are based on a daily build, which means all the built-in demo contents are reimported, the configurations are restored, and the customer created stuff are removed every day.
 
@@ -37,10 +37,6 @@ Let's add the following dependencies to your project.
 # Configure your project
 
 Followings should be created for using the API calls
-
-- create `Repository`
-- create `Content` object
-- create `RESTCaller`
 
 <tab category="basic-concepts" article="getting-started" example="configuration" />
 

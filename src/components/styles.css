@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
+@font-face {
+  font-family: 'snBrandIcons';
+  src: url('../assets/fonts/sn-brand.eot'); /* IE9 Compat Modes */
+  src: url('../assets/fonts/sn-brand.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../assets/fonts/sn-brand.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../assets/fonts/sn-brand.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../assets/fonts/sn-brand.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../assets/fonts/sn-brand.svg#snBrandIcons') format('svg'); /* Legacy iOS */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +49,7 @@ html, body {
 
 a {
   transition: color 0.15s;
-  color: #663399;
+  color: rgb(19, 165, 173);
 }
 
 
@@ -139,7 +149,7 @@ a:hover {
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
-  background-color: #542683;
+  background-color: #bde4e1;
 }
 
 .headerWrapper {
@@ -225,9 +235,9 @@ a:hover {
 }
 .headerTitle {
   height: auto;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
   color: rgba(0, 0, 0, 0.87) !important;
 }
 .headerTitle a {
@@ -283,7 +293,7 @@ a:hover {
 }
 
 .navBarBrand img {
-  width: 40px;
+  width: 30px;
   margin-right: 16px;
   display: inline-block;
 }
@@ -296,7 +306,7 @@ a:hover {
 .navBarUL li a {
   font-family: 'Roboto';
   color: rgba(0, 0, 0, 0.87) !important;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 1em;
   opacity: 1;
@@ -370,7 +380,7 @@ pre {
 }
 
 .sideBarUL li a {
-  color: #fff;
+  color: rgb(19, 165, 173);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
@@ -411,7 +421,7 @@ pre {
   padding: 7px 24px 7px 16px;
 }
 
-.hideFrontLine .collapser {
+.showFrontLine .collapser, .hideFrontLine .collapser {
   background: transparent;
   border: none;
   outline: none;
@@ -421,15 +431,24 @@ pre {
   cursor: pointer;
 }
 
-.hideFrontLine  .active >a{
-  background-color: #542683;
+.showFrontLine  .active >a, .hideFrontLine  .active >a{
+  background-color: #29a59b;
   color: #fff !important;
 }
 .firstLevel ul li .collapser svg path {
+  fill: rgba(0, 0, 0, 0.87) !important;
+}
+
+.firstLevel ul li.active .collapser svg path {
   fill: #fff !important;
 }
+
+.firstLevel ul li>a:hover .collapser svg path {
+  fill: rgba(0, 0, 0, 0.87) !important;
+}
+
 .active .collapser >svg >path {
-  fill: #663399 !important;
+  fill: rgba(0, 0, 0, 0.87) !important;
 }
 
 .showFrontLine .firstLevel ul .item ul .item {
@@ -441,7 +460,7 @@ pre {
   padding: 0;
 }
 .sideBarUL .item >a {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.87);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -451,16 +470,16 @@ pre {
   padding-left: 15px;
 }
 .sideBarUL .item>a:hover {
-  background-color: #542683;
-  color: #fff !important;
+  background-color: #bde4e1;
+  color: rgba(0, 0, 0, 0.87) !important;
 }
-.showFrontLine .item >a:hover {
-  background-color: #542683;
+/* .showFrontLine .item >a:hover {
+  background-color: #bde4e1;
 }
 .showFrontLine .active >a {
-  color: #fff;
-  background-color: #473485;
-}
+  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(19, 165, 173);
+} */
 
 .sideBarUL  .item .item{
   margin-left: 16px;
@@ -472,7 +491,7 @@ pre {
 
 .showFrontLine  .item .item {
   border-left: 1px solid #e6ecf1;
-  border-left-color: rgb(230, 236, 241);
+  border-left-color: rgba(0, 0, 0, 0.87);
   padding: 0;
   width: calc(100% - 16px) !important;
 }
@@ -481,8 +500,8 @@ pre {
   border-color: rgb(230,236,241) !important;
   border-style: solid none solid solid;
   border-width: 1px 0px 1px 1px;
-  background-color: #542683;
-  color: #fff;
+  /* background-color: #bde4e1; */
+  /* color: #fff; */
 }
 
 .titleWrapper {
@@ -497,7 +516,7 @@ pre {
   font-size: 32px;
   line-height: 1.5;
   font-weight: 500;
-  border-left: 2px solid rgb(116, 76, 188);
+  border-left: 2px solid #29a59b;
   padding: 0 16px;
   flex: 1;
   margin-top: 0;
@@ -637,13 +656,19 @@ pre {
 }
 
 .nextBtn:hover, .previousBtn:hover {
-  color: rgb(116, 76, 188);
+  color: rgb(19, 165, 173);
   text-decoration: none;
-  border: 1px solid rgb(116, 76, 188);
+  border: 1px solid rgb(19, 165, 173);
 }
 
 .nextBtn:hover .rightArrow, .previousBtn:hover .leftArrow {
-  color: rgb(116, 76, 188);
+  color: rgb(19, 165, 173);
+}
+
+.leftSideBar {
+  -webkit-box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
+  -moz-box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
+  box-shadow: 5px 0px 5px 0px rgba(116,129,141,0.1);
 }
 
 /* tables.css */
@@ -812,6 +837,7 @@ img {
 .topnav {
   -webkit-transition: top 0.5s, bottom 0.5s;
 }
+
 @media (max-width: 767px) {
   .responsive {
     margin-top: 15px;
@@ -961,3 +987,40 @@ img {
     padding-left: 0px;
   }
 }
+
+.snIcon:before {
+  font-family: "snBrandIcons";
+  font-style: normal;
+  font-weight: normal;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .5em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.snIcon.active {
+  color: #13a5ad
+}
+
+.snIcon.redux:before {content: '\e801';}
+.snIcon.sensenet:before {content: '\e800'}

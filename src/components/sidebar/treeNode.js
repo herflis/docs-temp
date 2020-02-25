@@ -16,7 +16,7 @@ const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, .
     location = document.location;
   }
   const active =
-    location && (location.pathname === url || location.pathname === (config.gatsby.pathPrefix + url));
+    location && (location.pathname === url || location.pathname === (config.gatsby.pathPrefix + url) || (location.pathname === config.gatsby.pathPrefix && url === '/basic-concepts'));
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
   return (
     <li

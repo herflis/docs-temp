@@ -1,3 +1,3 @@
 ```
-https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')?&metadata=no
+https://dev.demo.sensenet.com/OData.svc/Root/Content('IT')?metadata=no
 ```

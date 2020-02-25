@@ -1,5 +1,5 @@
 ```javascript
-  dispatch(Action.loadContent("/Root/Content('IT')",
+  storedispatch(Action.loadContent("/Root/Content('IT')",
   {
     select: ['CreatedBy/FullName'],
     expand: ['CreatedBy']

@@ -91,10 +91,11 @@ const Tree = ({edges}) => {
   return (
     <TreeNode
       key={treeData.title}
-      className={`${config.sidebar.frontLine ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
+      className={`${config.sidebar.frontline ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
       setCollapsed={toggle}
       collapsed={collapsed}
       {...treeData}
+
     />
   );
 }

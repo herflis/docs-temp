@@ -1,3 +1,3 @@
 ```javascript
-dispatch(Actions.fetchContent("/Root/Content"))
+store.dispatch(Actions.fetchContent("/Root/Content"))
 ```
