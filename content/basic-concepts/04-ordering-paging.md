@@ -26,7 +26,7 @@ The following examples shows how to sort the results by the `Id` field from lowe
 
 # Order by a field in reverse order
 
-The following examples shows how to sort the results by the `CreationDate` field from closest to earliest:
+The following examples shows how to sort the results by the `CreationDate` field from latest to earliest:
 
 <tab category="basic-concepts" article="ordering-paging" example="reverseOrder" />
 

@@ -1,6 +1,6 @@
 ```javascript
-const result = await repository.load({
-      idOrPath: '/Root/Content/IT',
+const result = await repository.loadCollection({
+      path: '/Root/Content/IT',
       oDataOptions: {
         expand: ['CreatedBy']
       }
