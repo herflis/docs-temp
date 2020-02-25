@@ -2,5 +2,5 @@
 https://dev.demo.sensenet.com/OData.svc/Root/Content?query=CreationDate%3A<@@CurrentDate-5days)@@
 
 // the special characters should be html encoded
-// the actual query here is ?query=CreationDat:<@@CurrentDate-5days@@
+// the actual query here is ?query=CreationDate:<@@CurrentDate-5days@@
 ```

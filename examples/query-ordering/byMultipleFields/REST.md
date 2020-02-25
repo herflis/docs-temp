@@ -1,6 +1,6 @@
 ```javascript
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=Type%3AFolder .SORT%3AName Index
+https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=Type%3AFolder .SORT%3AName .SORT%3AIndex
 
 // the special characters should be html encoded
-// the actual query here is ?query=Type:Folder .SORT:Name Index
+// the actual query here is ?query=Type:Folder .SORT:Name .SORT:Index
 ```
