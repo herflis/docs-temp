@@ -1,6 +1,6 @@
 ```javascript
-https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=EventType%3ADemo AND EventType%3AMeeting
+https://dev.demo.sensenet.com/OData.svc/Root/Content/IT?query=Ingredients%3Aapple AND Ingredients%3Amelon
 
 // the special characters should be html encoded
-// the actual query here is ?query=EventType:Demo AND EventType:Meeting
+// the actual query here is ?query=Ingredients:apple AND Ingredients:melon
 ```
