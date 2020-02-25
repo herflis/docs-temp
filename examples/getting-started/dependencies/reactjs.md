@@ -5,4 +5,5 @@
  */
 import { Repository, RepositoryConfiguration } from '@sensenet/client-core'
 import { useRepository } from "@sensenet/hooks-react";
+import { RepositoryContext } from "@sensenet/hooks-react";
 ```
