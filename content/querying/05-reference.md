@@ -10,7 +10,7 @@ Following query returns all the memo content created by the users with the jobti
 
 <tab category="querying" article="query-by-references" example="byCreator" />
 
-Inside the curly brackets there's a regular query for users - that is what we call inner query. When you execute a query like this, the system executes the inner query first and it results in a list of content with the name businesscat. Their id will be inserted automatically into the outer query as an OR expression:
+Inside the curly brackets there's a regular query for users - that is what we call inner query. When you execute a query like this, the system executes the inner query first and it results in a list of users. Their id will be inserted automatically into the outer query as an OR expression:
 
 ```+CreatedBy:(1495 1496)```
 

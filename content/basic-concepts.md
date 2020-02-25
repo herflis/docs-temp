@@ -34,7 +34,7 @@ Query options are query string parameters a client may specify to control the am
 | ------ | --- |
 | [$select](/basic-concepts/03-select-expand#select?target="_self") | specifies that a response from the service should return a subset of properties |
 | [$expand](/basic-concepts/03-select-expand#expand)| allows you to identify related entries with a single URI such that a graph of entries could be retrieved with a single HTTP request (e.g. creator user or any other related content) |
-| [$orderby](/basic-concepts/04-ordering-paging#ordering)  | allows you sort results by one or more properties, forward or reverse direction |
+| [$orderby](/basic-concepts/04-ordering-paging#ordering)  | allows you to sort results by one or more properties, forward or reverse direction |
 | [$top](/basic-concepts/04-ordering-paging#top) | identifies a subset selecting only the first N items of the set |
 | [$skip](/basic-concepts/04-ordering-paging#skip)  | identifies a subset that is defined by seeking N entries into the collection and selecting only the remaining ones |
 | [$filter](/basic-concepts/05-search-filter#filter)  | identifies a subset determined by selecting only the entries that satisfy the predicate expression specified by the query option |
@@ -53,7 +53,7 @@ The following HTTP methods can be used in requests to specify the expected opera
 | --- | --- |
 | GET | [getting one or more entities](). The URL contains all request information. |
 | PUT/PATCH | [modifying an entity](). The URL defines the entity and the request body contains a JSON object. This object describes the properties and new values of the requested entity. |
-| POST | [creating an entity](). The URL defines the entity and the request body contains a JSON object. The URL determines the place and name of the new entity. The JSON object describes the properties and initial values of the new entity. |
+| POST | [creating an entity](). The URL defines the parent entity and the request body contains a JSON object. The URL determines the container of the new entity. The JSON object describes the properties and initial values of the new entity. |
 | DELETE | [deleting an entity](). The entity (defined in the URL) and its children will be deleted. |
 
 # Response

@@ -35,7 +35,7 @@ The following example returns true if the given Name field ends with the given s
 <note title="Filtering does not work on reference properties" severity="error">In sensenet filtering for reference fields is not available so this type of filters will be skipped.</note>
 &nbsp;
 <note title="Do not use relational database specific operations in a filter" severity="error">
-Since the search engine of sensenet is based on Lucene.NET, it is text based and not a relational one. Because of that it cannot use two or more fields in one logical operation, and cannot process any operations with fields. For example: comparing value of two fields or executing field operations in terms.
+Since the search engine of sensenet is based on Lucene.NET, it is text based and not a relational one. Because of that you cannot use two or more fields in one logical operation, and cannot perform operations on fields. For example: comparing values of two fields or executing field operations in terms.
 </note>
 
 # Filtering by Date

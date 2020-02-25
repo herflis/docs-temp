@@ -6,7 +6,7 @@ metaDescription: "Query by multiple predicates"
 
 # Operators
 
-Operators allow terms to be combined through logic operators. sensenet query language supports AND, "+", OR, NOT and "-" as Boolean operators (boolean operators must be ALL CAPS like keywords).
+Operators allow terms to be combined through logical operators. sensenet query language supports AND, "+", OR, NOT and "-" as Boolean operators (boolean operators must be ALL CAPS like keywords).
 
 The `OR` operator is the default conjunction operator. This means that if there is no operator between two terms, the `OR` operator is used. The `OR` operator links two terms and finds a matching document if either of the terms exist in a document. This is equivalent to a union using sets.
 

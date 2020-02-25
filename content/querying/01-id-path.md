@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Query by Id or Path"
 metaDescription: "How to query content by Id or Path"
 ---
 
-Let's see what all you need to query a document by its `Id` or `Path`.
+Let's see what do you need to query a document by its `Id` or `Path`.
 
 # Query a content by its Id
 
@@ -20,9 +20,9 @@ The next example shows how to query multiple documents by Id's `1607`, `1640` an
 
 # Search in a folder
 
-You can specify a folder to search in with using `InFolder` param and the chosen parent's `Path` as its value in the query.
+You can specify a folder to search in using the `InFolder` param and the chosen parent's `Path` as its value in the query.
 
-Following query returns the children of the folder names Calgary:
+Following query returns the children of the folder named Calgary:
 
 <tab category="querying" article="query-by-id-path" example="inFolder" />
 
