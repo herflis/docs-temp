@@ -10,7 +10,7 @@ const repoInstance = new Repository(config);
 </RepositoryContext.Provider>,
 ```
 
-inside App conponent:
+// inside App conponent:
 
 ```typescript
 const repository = useRepository();
