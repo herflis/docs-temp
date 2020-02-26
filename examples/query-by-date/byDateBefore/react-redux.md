@@ -1,5 +1,5 @@
 ```javascript
 store.dispatch(Actions.fetchContent("/Root/Content", {
- query: "?query=CreationDate:<'2019-01-10'"
+ query: "CreationDate:<'2019-01-10'"
 }))
 ```
