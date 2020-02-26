@@ -1,4 +1,4 @@
-index.js:
+// index.js:
 
 ```typescript
 const repoInstance = new Repository(config);
