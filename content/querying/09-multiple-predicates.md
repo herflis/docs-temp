@@ -12,7 +12,7 @@ The `OR` operator is the default conjunction operator. This means that if there 
 
 <tab category="querying" article="query-multiple-predicates" example="or" />
 
-The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for content that contains the words apple and melon in the field Ingredients, use this query:
+The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for event that have the type demo or meeting in the field EventType, use this query:
 
 <tab category="querying" article="query-multiple-predicates" example="and" />
 
