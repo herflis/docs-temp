@@ -1,7 +1,7 @@
 ---
 title: Allowed Childtypes
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Allowed childtypes"
+metaDescription: "Managing allowed childtypes"
 ---
 
 # Allowed childtypes

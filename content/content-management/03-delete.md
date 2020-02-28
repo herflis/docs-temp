@@ -1,7 +1,7 @@
 ---
 title: Delete
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Delete content"
+metaDescription: "How to delete content"
 ---
 
 # Delete content

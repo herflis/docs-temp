@@ -1,7 +1,7 @@
 ---
 title: Upload
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Upload files"
+metaDescription: "How to upload files"
 ---
 
 # Upload

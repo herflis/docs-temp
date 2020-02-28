@@ -1,7 +1,7 @@
 ---
 title: Copy or move
-sidebar: ApiDocs
-showTitle: false
+metaTitle: "sensenet API - Copy and move content"
+metaDescription: "How to copy and move content"
 ---
 
 # Copy or move content
