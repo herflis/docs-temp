@@ -4,5 +4,6 @@ store.dispatch(Actions.share({
   identity: {Name: 'devdog', Id: 1498},
   sharingLevel: 'Edit',
   sharingMode: 'Private',
+  sendNotification: false
 }))
 ```

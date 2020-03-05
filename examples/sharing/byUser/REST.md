@@ -4,7 +4,7 @@ type: 'POST',
 data: "models=[" + JSON.stringify({
     token: 'alba@sensenet.com',
     level: 'Open',
-    mode: 'Public',
-    notification: true
+    mode: 'Private',
+    sendNotification: true
   }) + "]",
 ```
