@@ -23,3 +23,7 @@ Returns the number of currently existing preview images. If necessary, it can ma
 It clears all existing preview images for a document and starts a task for generating new ones. This can be useful in case the preview status of a document has been set to ‘error’ before for some reason and you need to force the system to re-generate preview images.
 
 <tab category="preview" article="preview" example="regeneratePreviews" />
+
+# Commenting preview images
+
+!TODO!
