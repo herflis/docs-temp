@@ -35,7 +35,7 @@ The next example query returns the same content as the above one but in reverse 
 
 Following query example shows how to order results by multiple fields, in this case folders by their name and index fields:
 
-<tab category="querying" article="query-ordering" example="multipleFields" />
+<tab category="querying" article="query-ordering" example="byMultipleFields" />
 
 # Order by multiple fields in different directions
 
