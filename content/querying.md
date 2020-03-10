@@ -24,11 +24,11 @@ sensenet supports single and multiple character wildcard searches within single 
 
 Following returns content containing the word *truck* or *trunk*:
 
-<tab category="querying" article="querying" example="wildcard-search-single" />
+<tab category="querying" article="query" example="wildcard-search-single" />
 
 Following returns content containing the word *apple* or *application*:
 
-<tab category="querying" article="querying" example="wildcard-search-multiple" />
+<tab category="querying" article="query" example="wildcard-search-multiple" />
 
 # Fuzzy search
 
@@ -36,7 +36,7 @@ You can search for similar words based on Lucene's Fuzzy search. Fuzzy search is
 
 With the following query example you can find documents that contain a word differing only in one character from "abbreviate" e.g. *abreviate*, *sbbreviate* etc.
 
-<tab category="querying" article="querying" example="fuzzy-search" />
+<tab category="querying" article="query" example="fuzzy-search" />
 
 # Proximity search
 
@@ -44,7 +44,7 @@ It is possible to limit the distance between the given words in the result docum
 
 Following query will find the content with the text *Lorem ipsum dolor sit amet*, because there are 3 words between the words *Lorem* and *amet*.
 
-<tab category="querying" article="querying" example="proximity-search" />
+<tab category="querying" article="query" example="proximity-search" />
 
 # Keywords
 
@@ -66,11 +66,11 @@ Lucene query supports escaping special characters that are reserved in the query
 To escape one of these characters use a `\` before the character.
 For example to search in a folder called (5+5-3), you can use the query:
 
-<tab category="querying" article="querying" example="special-characters-escaping" />
+<tab category="querying" article="query" example="special-characters-escaping" />
 
 You can also create phrases by adding aphostrophes around words. So if you want to search for (1+1):2, you can use the query:
 
-<tab category="querying" article="querying" example="special-character-apostrophe" />
+<tab category="querying" article="query" example="special-character-apostrophe" />
 
 # Quick queries
 
@@ -78,4 +78,4 @@ When content items are being created or changed, these changes need to be update
 
 Following is an example of CQL syntax for executing a quick query:
 
-<tab category="querying" article="querying" example="quick-query" />
+<tab category="querying" article="query" example="quick-query" />
