@@ -1,9 +1,6 @@
 ```javascript
-const result = await repo.post({
-  parentPath: `/Root/Content/IT`,
-  contentType: 'Folder',
-  content: {
-    Name: 'My new folder',
-  },
+const result = await repo.delete({
+  idOrPath: `/Root/Content/Document_Library/Chicago/100Pages.docx`,
+  permanent: false
 })
 ```
