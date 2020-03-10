@@ -66,7 +66,7 @@ Lucene query supports escaping special characters that are reserved in the query
 To escape one of these characters use a `\` before the character.
 For example to search in a folder called (5+5-3), you can use the query:
 
-<tab category="querying" article="querying" example="special-character-escaping" />
+<tab category="querying" article="querying" example="special-characters-escaping" />
 
 You can also create phrases by adding aphostrophes around words. So if you want to search for (1+1):2, you can use the query:
 
