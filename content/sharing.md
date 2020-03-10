@@ -6,7 +6,7 @@ metaDescription: "Sharing"
 
 Sharing in sensenet (like many other features of the Content Repository) is built around the concept of content. As sensenet content items are stored in a huge tree, it is easy to share not only a single content (like a document) but a whole folder or a workspace with other users.
 
-Content in sensenet could be shared in various different modes and levels both width registered or external users. For the sharing concepts please refer the [concept docs](/concepts/sharing).
+Content in sensenet could be shared in various different modes and levels both with registered or external users. For the sharing concepts please refer the [concept docs](/concepts/sharing).
 
 # Share with a user
 
