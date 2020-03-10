@@ -1,5 +1,5 @@
 ```javascript
 store.dispatch(Actions.fetchContent("/Root/Content/IT", {
- query: "apple -melon"
+ query: "upgrade -demo"
 }))
 ```

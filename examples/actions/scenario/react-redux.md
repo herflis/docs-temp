@@ -3,6 +3,6 @@
   {
     expand: ['Actions'],
     select: ['Actions'],
-    scenario: 'UserMenu'
+    scenario: 'ContextMenu'
   }))
 ```

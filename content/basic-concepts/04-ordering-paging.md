@@ -51,6 +51,8 @@ With the `$top` option you can limit collection results.
 `$skip` option is for hiding the first given number of elements from the result.
 
 <tab category="basic-concepts" article="ordering-paging" example="skip" />
+&nbsp;
+<note>Negative value causes error. Zero value means "no skip".</note>
 
 # Pagination
 
@@ -59,5 +61,3 @@ In case of paging the `$top` option defines the maximum number of documents that
 Following example demonstrates how to query the second page of a folder list with 3 folder on a page.
 
 <tab category="basic-concepts" article="ordering-paging" example="paging" />
-&nbsp;
-<note>Negative value causes error. Zero value means "no skip".</note>
