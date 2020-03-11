@@ -11,3 +11,5 @@ In some cases we want to filter content by their lifespan information and creati
 The lifespan filtering is turned off by default in sensenet, so if you want to get results depending on the lifespan validity status of content, you have to switch this filter on as it is made in the following example:
 
 <tab category="basic-concepts" article="lifespan" example="lifespanfilter" />
+
+<note>Lifespan filtering requires a few other configuration and content managing steps. Check the [related concept docs](/concepts/lifespan) for further information.</note>

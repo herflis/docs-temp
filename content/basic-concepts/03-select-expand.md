@@ -28,7 +28,7 @@ The value provided in the `$expand` option is a comma separated list of navigati
 
 <tab category="basic-concepts" article="select-expand" example="expand" />
 
-You may even expand fields of expanded content by providing a 'field name chain', separated by slashes (e.g. `CreatedBy/Manager`).
+You may even expand fields of expanded content by providing a 'field name chain', separated by slashes (e.g. `CreatedBy/CreatedBy`).
 
 <tab category="basic-concepts" article="select-expand" example="expandExpanded" />
 

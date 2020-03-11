@@ -46,7 +46,7 @@ The following example query returns contents created between the two given dates
 
 # Querying with dynamic template parameters
 
-Using template parameters helps you to use dynamic values in queries. For further information and full list of the available template parameters see the [relates docs](/querying/11-template-parameters#list-of-builtin-template-parameters) and for some date query related help see the following examples.
+Using template parameters helps you to use dynamic values in queries. For further information and full list of the available template parameters see the [related docs](/querying/11-template-parameters#list-of-builtin-template-parameters) and for some date query related help see the following examples.
 
 This query returns the contents modified yesterday:
 

@@ -12,7 +12,7 @@ The content of the result collection depends on availability of each individual 
 
 Following example's results will be the list of actions and functions that are available on the given file:
 
-<tab category="basic-concepts" article="actions" example="actions" />
+<tab category="basic-concepts" article="action" example="actions" />
 
 
 # Scenario
@@ -21,9 +21,9 @@ You can group the action content into a scenario and of course you can later fil
 
 You can filter the actions with a (case sensitive) scenario name and the filter is the `scenario` URL parameter.
 
-In the following example you can see how to get only those actions and functions that are grouped into the `UserMenu` scenario:
+In the following example you can see how to get only those actions and functions that are grouped into the `ContextMenu` scenario:
 
-<tab category="basic-concepts" article="actions" example="scenario" />
+<tab category="basic-concepts" article="action" example="scenario" />
 
 The response will be something similar like the following:
 
