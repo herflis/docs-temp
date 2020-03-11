@@ -7,6 +7,7 @@ import { Layout, Link } from "../components";
 import NextPrevious from '../components/NextPrevious';
 import '../components/styles.css';
 import config from '../../config';
+import langs from '../components/mdxComponents/langs';
 
 const forcedNavOrder = config.sidebar.forcedNavOrder;
 
@@ -53,7 +54,7 @@ export default class MDXRuntimeTest extends Component {
 
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
-      .filter(slug => slug !== "/")
+      .filter(slug => slug !== "/" && !isExample(slug))
       .sort()
       .reduce(
         (acc, cur) => {
@@ -78,7 +79,7 @@ export default class MDXRuntimeTest extends Component {
       }, [])
       .concat(navItems.items)
       .map(slug => {
-        if(slug) {
+        if(slug && !isExample(slug)) {
           const { node } = allMdx.edges.find(
             ({ node }) => node.fields.slug === slug
           );
@@ -165,3 +166,8 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const isExample = (path) => {
+  const fileName = path.replace(/^.*[\\\/]/, '')
+  return langs.findIndex(l => l.name === fileName) > -1
+}
