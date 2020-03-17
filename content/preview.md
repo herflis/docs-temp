@@ -24,6 +24,24 @@ It clears all existing preview images for a document and starts a task for gener
 
 <tab category="preview" article="previews" example="regeneratePreviews" />
 
-# Commenting preview images
+# Commenting previews
 
-!TODO!
+A relatively new feature of sensenet document viewer is preview commenting. Basically it lets you manage comments of a document, connect the comments with the pages aka preview images with saving the data on the content itself. However it is a feature made for the document viewer, the following actions can be useful in your a custom sensenet document management project as well.
+
+## Add comment
+
+With the first example you can comment the third page of a document. You can also add coordinates to define which part of the page is actually commented:
+
+<tab category="preview" article="previews" example="addComment" />
+
+## Get comments for a page
+
+Following example shows you how to get comments for the third page of a document:
+
+<tab category="preview" article="previews" example="getComments" />
+
+## Remove comment
+
+With the next example you can remove the comment from the third page of the same document:
+
+<tab category="preview" article="previews" example="removeComment" />
