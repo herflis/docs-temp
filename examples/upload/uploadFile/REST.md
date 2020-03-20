@@ -1,6 +1,6 @@
 ```
 // initial request
-url: "/OData.svc/Root/Content/IT/('Document_Library')/Upload?create=1",
+url: "/OData.svc/Root/Content/IT('Document_Library')/Upload?create=1",
 type: 'POST',
 data: {
   "ContentType": "File",

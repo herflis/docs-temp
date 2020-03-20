@@ -1,9 +1,9 @@
 ```
-url: "/OData.svc/Root/Content/IT('Document_Library')/Upload",
+url: "/OData.svc/Root/System('Settings')/Upload",
 type: 'POST',
 data: {
-  "ContentType": "File",
-  "FileName": "MyMarkdown.md",
+  "ContentType": "Settings",
+  "FileName": "MyCustom.settings",
   "Overwrite": true,
   "UseChunk": false,
   "PropertyName": "Binary",

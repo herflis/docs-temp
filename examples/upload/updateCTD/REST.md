@@ -1,9 +1,9 @@
 ```
-url: "/OData.svc/Root/Content/IT('Document_Library')/Upload",
+url: "/OData.svc/Root/System/Schema('ContentTypes')/Upload",
 type: 'POST',
 data: {
-  "ContentType": "File",
-  "FileName": "MyMarkdown.md",
+  "ContentType": "ContentType",
+  "FileName": "MyContentType.xml",
   "Overwrite": true,
   "UseChunk": false,
   "PropertyName": "Binary",
