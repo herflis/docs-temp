@@ -17,10 +17,20 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const CopyToClipBoard = () => {
+const CopyToClipBoard = (props) => {
   const classes = useStyles();
+
+  const copy = () => {
+
+    const textField = document.createElement('textarea')
+    textField.innerText = props.content;
+    document.body.appendChild(textField)
+    textField.select()
+    document.execCommand('copy')
+    textField.remove()
+  }
   return(
-<a className={classes.button}>Copy</a>
-)}
+      <a className={classes.button} onClick={copy}>Copy</a>
+  )}
 
 export default CopyToClipBoard
