@@ -1,6 +1,6 @@
 ```javascript
-  store.dispatch(Action.checkPreviews(
+  store.dispatch(Action.removePreviewComment(
     "/Root/Content/IT/Document_Library/Calgary/BusinessPlan.docx",
-    true
+    1234
   ))
 ```
