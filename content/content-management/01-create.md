@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Create a content"
 metaDescription: "How to create a new content"
 ---
 
-Creating a content is an http `POST` request under the hood. You can call it with defining the parent content (this will be the path where the actual request will be sent), the required type and a content object with the fields and values that you want to saved when the new content is created (these things have to be added the the request body). These `POST` requests will return with the newly created content object in json.
+Creating a content is an http `POST` request under the hood. You can call it with defining the parent content (this will be the path where the actual request will be send), the required type and a content object with the fields and values that you want to saved when the new content is created (these things have to be added the request body). These `POST` request will returning with the newly created content object in json.
 
 Without defining the content type of the new entity will be the first allowed content type of the parent entity. The default content type is overridable in the posted JSON object with the `__ContentType` property, as you can see in the example below.
 
