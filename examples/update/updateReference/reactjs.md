@@ -1,5 +1,5 @@
 ```javascript
-const response = await repo.patch({
+const response = await repository.patch({
   idOrPath: /Root/Content/IT,
   content: {
     Manager: 12345
