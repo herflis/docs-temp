@@ -1,5 +1,5 @@
 ```javascript
-const result = await repo.delete({
+const result = await repository.delete({
   idOrPath: [
     "/Root/Content/IT/Document_Library/Chicago/100Pages.docx",
     "/Root/Content/IT/Document_Library/Chicago/VehicleLog.xlsx",

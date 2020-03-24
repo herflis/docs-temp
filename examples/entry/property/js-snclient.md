@@ -1,3 +1,8 @@
 ```javascript
-// Currently there is no api to access a single property
+const result = await repository.load({
+  idOrPath: "/Root/Content/IT",
+  oDataOptions: {
+    select: ["DisplayName"]
+  }
+});
 ```

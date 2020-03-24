@@ -1,5 +1,5 @@
 ```javascript
-const result = await repo.executeAction({
+const result = await repository.executeAction({
   idOrPath: 1284,
   name: 'RemoveSharing',
   method: 'GET',
