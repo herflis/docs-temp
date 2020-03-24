@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Delete content"
 metaDescription: "How to delete content"
 ---
 
-Deleting a content is an http `DELETE` request under the hood. You can call it with defining the content that you want to delete and setting whether the deleted item should be first moved to the trash or be deleted immediately. These `DELETE` request will returning a json something similar like the following. It contains number of deleted items, basic info about the deleted item(s) and if some of the given conents cannot be deleted for some reason, there will be error messages listed in the `errors` array:
+Deleting a content is an http `DELETE` request under the hood. You can call it with defining the content that you want to delete and setting whether the deleted item should be first moved to the trash or be deleted immediately. These `DELETE` request will returning a json something similar like the following. It contains number of deleted items, basic info about the deleted item(s) and if some of the given contents cannot be deleted for some reason, there will be error messages listed in the `errors` array:
 
 ```json
 {
