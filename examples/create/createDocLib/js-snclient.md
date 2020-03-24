@@ -1,5 +1,5 @@
 ```javascript
-const result = await repo.post({
+const result = await repository.post({
   parentPath: `/Root/Content/IT`,
   contentType: 'DocumentLibrary',
   content: {
