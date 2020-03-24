@@ -7,7 +7,7 @@ const response = await fetch(
     body:
       "models=[" +
       JSON.stringify({
-        EventType: "Demo"
+        EventType: ['Demo','Meeting']
       }) +
       "]"
   }
