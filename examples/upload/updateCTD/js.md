@@ -4,14 +4,14 @@ const response = await fetch(
   {
     credentials: "include",
     method: "POST",
-    body: JSON.stringify({
+    body: {
       ContentType: "ContentType",
       FileName: "MyContentType.xml",
       Overwrite: true,
       UseChunk: false,
       PropertyName: "Binary",
       FileText: " *** file text data ***"
-    })
+    }
   }
 );
 ```
