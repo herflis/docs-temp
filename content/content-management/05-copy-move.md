@@ -14,22 +14,22 @@ You can copy or move single or multiple content at once. With copy the system cr
 
 Following example will copy the content that the action is called in to the given target container:
 
-<tab category="querying" article="copy-move" example="copyContent" />
+<tab category="content-management" article="copy-move" example="copyContent" />
 
 ## Copy multiple content
 
 The next examples shows how to copy multiple documents into another folder:
 
-<tab category="querying" article="copy-move" example="copyMultiple" />
+<tab category="content-management" article="copy-move" example="copyMultiple" />
 
 ## Move a single content
 
 Following example shows how to move a content to a given target folder:
 
-<tab category="querying" article="copy-move" example="moveContent" />
+<tab category="content-management" article="copy-move" example="moveContent" />
 
 ## Move multiple content
 
 Next example shows how to move multiple documents into another target folder:
 
-<tab category="querying" article="copy-move" example="moveMultiple" />
+<tab category="content-management" article="copy-move" example="moveMultiple" />
