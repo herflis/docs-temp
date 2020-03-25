@@ -1,8 +1,8 @@
 ```javascript
 const result = await repository.loadCollection({
-  path: "/Root/Content/IT",
+  path: "/Root/IMS/Public",
   oDataOptions: {
-    query: `CreatedBy:{{JobTitle:'developer'}}`
+    query: `Manager:{{Name:'businesscat'}}`
   }
 });
 ```
