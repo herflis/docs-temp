@@ -70,6 +70,7 @@ const calculateTreeData = edges => {
 
 
 const Tree = ({edges}) => {
+
   const [treeData] = useState(() => {
     return calculateTreeData(edges);
   });
@@ -81,7 +82,25 @@ const Tree = ({edges}) => {
       defaultCollapsed[item.url] = false;
     }
   });
+  treeData.items.forEach(item => {
+    const url = window.location.href.replace(/^.*\/\/[^\/]+/, '')
+    if(url.includes(item.url)){
+      defaultCollapsed[item.url] = false;
+    }
+    else if (item.url !== undefined){
+      defaultCollapsed[item.url] = true;
+    }
+  })
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
+  treeData.items.forEach(item => {
+    const url = window.location.href.replace(/^.*\/\/[^\/]+/, '')
+    if(url.includes(item.url)){
+      collapsed[item.url] = false;
+    }
+    else if (item.url !== undefined){
+      collapsed[item.url] = true;
+    }
+  })
   const toggle = (url) => {
     setCollapsed({
       ...collapsed,
