@@ -22,13 +22,15 @@ This next example returns with the list of content types allowed directly on the
 
 <tab category="content-management" article="allowed-childtypes" example="allowedChildTypes" />
 
-## Get allowed childtypes allowed in a content type definition
+## Get allowed childtypes set in the content type definition
 
 Next example returns with the list of content types set as allowed in the given content's CTD:
 
 <tab category="content-management" article="allowed-childtypes" example="allowedChildTypesFromCTD" />
 
 ## Update list of allowed childtypes on a content
+
+You are able to update the allowed type list at once with updating the value of the `AllowedChildType` field of the content. It works the same as updating other field values as you can see in the next example, you can update the list by adding the list of type name as the value of the mentioned field:
 
 <tab category="content-management" article="allowed-childtypes" example="updateAllowedChildTypes" />
 
