@@ -28,6 +28,10 @@ Next example returns with the list of content types set as allowed in the given 
 
 <tab category="content-management" article="allowed-childtypes" example="allowedChildTypesFromCTD" />
 
+## Update list of allowed childtypes on a content
+
+<tab category="content-management" article="allowed-childtypes" example="updateAllowedChildTypes" />
+
 ## Add a type to the allowed childtypes
 
 The following example shows you how to add types to the given content's allowed content type list:
