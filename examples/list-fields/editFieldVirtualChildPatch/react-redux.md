@@ -1,6 +1,9 @@
 ```javascript
-store.dispatch(Actions.addAllowedChildTypes(
-  '/Root/Content/IT',
-  ["Task", "Image"]
+store.dispatch(Actions.updateContent(
+  {Path: '/Root/Content/IT/Document_Library/MyField1'},
+  {
+    MinValue: 5,
+    MaxValue: 20
+  }
 )
 ```

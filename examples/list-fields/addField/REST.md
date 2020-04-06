@@ -1,5 +1,5 @@
 ```
-url: "/OData.svc/Content/IT('Document_Library')"
+url: "/OData.svc/Root/Content/IT('Document_Library')"
 type: 'POST',
 data: "models=[" + JSON.stringify({
   '__ContentType':'IntegerFieldSetting' ,
