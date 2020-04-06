@@ -8,7 +8,7 @@ import langs from "../mdxComponents/langs";
 const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, ...rest}) => {
   const isCollapsed = collapsed[url];
   const collapse = () => {
-    setCollapsed(url);
+    setCollapsed(url)
   }
   const hasChildren = items.length !== 0;
   let location;
