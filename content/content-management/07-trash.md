@@ -23,7 +23,7 @@ The following example shows you how you can restore an item from the trash to it
 
 ## Restore items with a new name
 
-It is possible to rename the restored content automatically if there's other content with the same name at the time of the restore at the chosen destinaton (e.g. mydocument(1).docx). See how you can use the `newname` param:
+It is possible to rename the restored content automatically if there's other content with the same name at the time of the restore at the chosen destination (e.g. mydocument(1).docx). See how you can use the `newname` param:
 
 <tab category="content-management" article="trash" example="restoreWithNewName" />
 
