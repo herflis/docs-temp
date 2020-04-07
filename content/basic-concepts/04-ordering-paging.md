@@ -26,13 +26,13 @@ The following examples shows how to sort the results by the `Id` field from lowe
 
 # Order by a field in reverse order
 
-The following examples shows how to sort the results by the `CreationDate` field from closest to earliest:
+The following example shows how to sort the results by the `CreationDate` field from closest to earliest:
 
 <tab category="basic-concepts" article="ordering-paging" example="reverseOrder" />
 
 # Order by a multiple fields
 
-You can specify multiple fields to sort the order of your results by. The results will ordered first by the first field specified. If any of those values are equal, then those results will be sorted by the next specified field. And so on.
+You can specify multiple fields to sort the order of your results by. The results will be ordered first by the first field specified. If any of those values are equal, then those results will be sorted by the next specified field. And so on.
 
 Here is an example that will order the results first by the last modification date of the docs from closest to earliest. It will then sort any docs that have the same `ModificationDate` by their `DisplayName`.
 
@@ -48,9 +48,11 @@ With the `$top` option you can limit collection results.
 
 # Skip
 
-`$skip` option is for hiding the given first elements from the result.
+`$skip` option is for hiding the first given number of elements from the result.
 
 <tab category="basic-concepts" article="ordering-paging" example="skip" />
+&nbsp;
+<note>Negative value causes error. Zero value means "no skip".</note>
 
 # Pagination
 
@@ -59,5 +61,3 @@ In case of paging the `$top` option defines the maximum number of documents that
 Following example demonstrates how to query the second page of a folder list with 3 folder on a page.
 
 <tab category="basic-concepts" article="ordering-paging" example="paging" />
-&nbsp;
-<note>Negative value causes error. Zero value means "no skip".</note>

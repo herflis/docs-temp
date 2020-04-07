@@ -6,13 +6,13 @@ metaDescription: "Query by multiple predicates"
 
 # Operators
 
-Operators allow terms to be combined through logic operators. sensenet query language supports AND, "+", OR, NOT and "-" as Boolean operators (boolean operators must be ALL CAPS like keywords).
+Operators allow terms to be combined through logical operators. sensenet query language supports AND, "+", OR, NOT and "-" as Boolean operators (boolean operators must be ALL CAPS like keywords).
 
 The `OR` operator is the default conjunction operator. This means that if there is no operator between two terms, the `OR` operator is used. The `OR` operator links two terms and finds a matching document if either of the terms exist in a document. This is equivalent to a union using sets.
 
 <tab category="querying" article="query-multiple-predicates" example="or" />
 
-The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for content that contains the words apple and melon in the field Ingredients, use this query:
+The `AND` operator matches documents where both terms exist anywhere in the text or fields of a single document. To search for event that have the type demo or meeting in the field EventType, use this query:
 
 <tab category="querying" article="query-multiple-predicates" example="and" />
 

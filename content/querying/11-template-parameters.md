@@ -6,15 +6,15 @@ metaDescription: "Using template parameters"
 
 # Using template parameters
 
-You can use parameters in your query text that will we be replaced by the sensenet in the background. This lets you create a dynamic queries. For example it is possible to present the top 5 news of the day or listing the content modified by the currently logged in user.
+You can use parameters in your query text that will be replaced by sensenet in the background. This lets you create dynamic queries. For example it is possible to present the top 5 news of the day or listing the content modified by the currently logged in user.
 
-The usage of the parameters is easy: just put them into the query between double @@ signs:
+The usage of parameters is easy: just put them into the query between double @@ signs:
 
 ```ModifiedBy:@@CurrentUser@@```
 
-# List of builtin template parameters
+# List of built-in template parameters
 
-Followings are the built-in parameters that you can use in your queries:
+These are the built-in parameters that you can use in your queries:
 
 | Parameter name | Description |
 | -------------- | ----------- |
@@ -41,7 +41,7 @@ Followings are the built-in parameters that you can use in your queries:
 
 Let's see some examples.
 
-The following first example results the content shared with the current user:
+The following example results the content shared with the current user:
 
 <tab category="querying" article="query-template-parameters" example="sharedWithCurrentUser" />
 
@@ -61,7 +61,7 @@ The following query returns every task that is created within the current worksp
 Notice the apostrophes around the template. Since a path may contain characters like '-' that are special characters in the query language, it is best to put templates like this inside quotation marks.
 </note>
 
-Properties can be also chained like in the next example where we query for get the list of users who where created before the current workspace's manager did was:
+Properties can also be chained like in the next example where we query for get the list of users who where created before the current workspace's manager was:
 
 <tab category="querying" article="query-template-parameters" example="chainingProperties" />
 
@@ -69,11 +69,11 @@ Properties can be also chained like in the next example where we query for get t
 
 You can also use simple value modifiers (a '+' or '-') in template values (e.g. dates or numbers). This is extremely useful in case of dates, when you want your query to contain dates in the past or future. You may use any one of the date templates above, or any content property that is a date or number.
 
-For example lets see how to get the list of items that was created in the last five days:
+For example lets see how to get the list of items that were created in the last five days:
 
 <tab category="querying" article="query-template-parameters" example="template-expressions" />
 
-It also can be used in a method-like syntax:
+It can also be used in a method-like syntax:
 
 <tab category="querying" article="query-template-parameters" example="template-expressions-methodlike" />
 

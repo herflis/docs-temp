@@ -24,6 +24,12 @@ Just like with a dedicated sensenet instance, with these demos you can create, s
 
 Now, let's take a look at how to connect the chosen content repository with your project.
 
+# Your project
+## .Net Client
+You can connect to sensenet from either a **console application**, a **desktop application** or even from a server-side ASP.NET **web application** (for backend requests). The only requirement is to add the dependency below from NuGet. 
+
+<note title="sensenet as a remote service">The following .Net examples will help you connect to a remote sensenet service. To work in an in-proc environment when you have access to the server-side API of sensenet and a direct access to the repository database requires a different approach.</note>
+
 # Include the dependencies
 
 Let's add the following dependencies to your project.

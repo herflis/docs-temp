@@ -44,7 +44,7 @@ Raw value of a property can be accessed if the request is extended with the `/$v
 
 <tab category="basic-concepts" article="entry" example="propertyValue" />
 
-This returns with the following response:
+This returns the following response:
 
 ```Document Workspaces```
 
@@ -56,14 +56,14 @@ Binary data (value of a binary field) is represented by an [OData Named Resource
 {
   "d": {
     "__metadata": {
-      "uri": "/OData.svc/workspaces/Project/budapestprojectworkspace/Document_Library('Aenean semper.doc')",
+      "uri": "/OData.svc/Root/Content/IT/Document_Library('Aenean semper.doc')",
       "type": "File"
     },
     ...
     "Binary": {
       "__mediaresource": {
         "edit_media": null,
-        "media_src": "/workspaces/Project/budapestprojectworkspace/Document_Library/Aenean semper.doc",
+        "media_src": "/Root/Content/IT/Document_Library/Aenean semper.doc",
         "content_type": "application/msword",
         "media_etag": null
       }

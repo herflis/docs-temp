@@ -6,7 +6,7 @@ metaDescription: Working with the content types
 
 # Schema
 
-sensenet organizes content into content repositories, that allows you to group all the related content for a project together. Since everything is a content is sensenet this repository includes documents, workspaces, users, settings, workspaces and many more.
+sensenet organizes content into content repositories, that allows you to group all the related content for a project together. Since everything is a content in sensenet this repository includes documents, workspaces, users, settings, workspaces and many more.
 
 The content repository contains many different types of content. Content vary in structure and even in function. Different types of content contain different fields, can be displayed in different ways, and may also implement different business logic. The fields, views and business logic of a content is defined by its type.
 
@@ -20,7 +20,7 @@ Following example returns the content types and all its properties and fields in
 
 # Change the schema
 
-Content types are stored as contents (.xml files) in the content repository as well. If you want to change the schema (modify a content type) you have to update one of the these .xml files. As these files are stored as contents with a binary field containing the actual text content of the file, updating these fields' value can be made by getting the text and upload the file again with the updated text as the binary fields value.
+Content types are stored as contents (.xml files) in the content repository as well. If you want to change the schema (modify a content type) you have to update one of these .xml files. As these files are stored as contents with a binary field containing the actual text content of the file, updating these fields' value can be made by getting the text and upload the file again with the updated text as the binary fields value.
 
 Following example returns the binary value of a file content, where 1064 is the `Id` of the Workspace type content:
 

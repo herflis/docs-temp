@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -76,6 +76,9 @@ const a11yProps = (index) => {
 
 const TabStrip = (props) => {
   const theme = useTheme();
+
+  const [copyText, setCopyText] = useState('');
+
   const handleChange = (newValue, toggleLanguage) => {
     setValue(newValue);
     toggleLanguage(langs[newValue].name)
@@ -103,7 +106,7 @@ const TabStrip = (props) => {
     <LanguageContext.Consumer>
       {({lang, toggleLanguage}) => (
     <div className={classes.root}>
-        <CopyToClipBoard  />
+        <CopyToClipBoard content={copyText}  />
         <Tabs
           value={langs.findIndex(l => l.name === lang)}
           onChange={(event, value) => toggleLanguage(langs[value].name)}
@@ -121,7 +124,9 @@ const TabStrip = (props) => {
         </Tabs>
         {
         getRelatedNodes(data.allExample.nodes, props.example, props.article).map((node, i) => {
-          return (<TabPanel key={`${node.name}`} value={langs.findIndex(l => l.name === lang)} index={i} dir={theme.direction}>{node.internal.content}</TabPanel>)
+          const text = langs.findIndex(l => l.name === lang)
+          setCopyText(node.internal.content)
+          return (<TabPanel key={`${node.name}`} value={text} index={i} dir={theme.direction}>{node.internal.content}</TabPanel>)
           }
         )
       }
