@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Copy and move content"
 metaDescription: "How to copy and move content"
 ---
 
-You can copy or move single or multiple content at once. With copy the system creates a new content, a copy of the chosen item(s) in a chosen target container and the keeps the original one(s) as well. Using move lets you move a content(s) to another container.
+You can copy or move single or multiple content at once. With copy the system creates a new content, a copy of the chosen item(s) in a chosen target container and keeps the original one(s) as well. Using move lets you move a content(s) to another container.
 
 <note severity="info">Always check the allowed child types set on the chosen target container, because it can result an unsuccessful copy or move.</note>
 &nbsp;
