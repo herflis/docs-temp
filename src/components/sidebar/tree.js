@@ -2,7 +2,9 @@ import React, {useState} from 'react';
 import config from '../../../config';
 import TreeNode from './treeNode';
 
-typeof window !== 'undefined' && window.location
+if (typeof window === 'undefined') {
+  global.window = {}
+}
 
 const calculateTreeData = edges => {
   const originalData = config.sidebar.ignoreIndex ? edges.filter(({node: {fields: {slug}}}) => slug !== '/') : edges;
