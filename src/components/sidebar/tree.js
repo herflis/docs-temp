@@ -87,6 +87,10 @@ const Tree = ({edges}) => {
     if (typeof window === 'undefined') {
       global.window = {}
     }
+
+    if (typeof window.location === 'undefined') {
+      global.window.location = ''
+    }
     const url = window.location.href.replace(/^.*\/\/[^\/]+/, '')
     if(url.includes(item.url)){
       defaultCollapsed[item.url] = false;
@@ -101,6 +105,10 @@ const Tree = ({edges}) => {
 
     if (typeof window === 'undefined') {
       global.window = {}
+    }
+
+    if (typeof window.location === 'undefined') {
+      global.window.location = ''
     }
     const url = window.location.href.replace(/^.*\/\/[^\/]+/, '')
     if(url.includes(item.url)){
