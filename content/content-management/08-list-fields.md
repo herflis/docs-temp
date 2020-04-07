@@ -4,13 +4,13 @@ metaTitle: "List fields"
 metaDescription: "Managing list fields through OData"
 ---
 
-Built-in ContentList type (and all the inherited ones like DocumentLibrary or TaskList) has a few legacy features that are now under rethinking and re-development (e.g. notifications, workflows). One of them is the possibility to add so called expando fields directly to individual lists without editing the type definition xmls and make a field available through the whole repository. Although this feature is not pushed to the forefront, let's give you some examples of what we can do with it through OData.
+The built-in ContentList type (and all the inherited ones like DocumentLibrary or TaskList) has a few legacy features that are now under rethinking and re-development (e.g. notifications, workflows). One of them is the possibility to add so called expando fields directly to individual lists without editing the type definition xmls and make a field available through the whole repository. Although this feature is not pushed to the forefront, let's see some examples of what we can do with it through OData.
 
 ## Browsing list fields
 
-List fields has a `#` prefix, so their names look like `#MyField`. Except for this, they are not different from the other fields in terms of OData, they can be selected, expanded, used in queries or in paging and ordering.
+List fields have a `#` prefix, so their names look like `#MyField`. Except for this, they are not different from the other fields in terms of OData, they can be selected, expanded, used in queries or in paging and ordering.
 
-Lets see a json response of a requested list item with an expando field:
+Lets see a JSON response of a requested list item with an expando field:
 
 ```json
 {
@@ -25,13 +25,13 @@ Lets see a json response of a requested list item with an expando field:
 }
 ```
 
-Following example shows how to use expando fieldss in an OData request as selected field:
+The following example shows how to use expando fields in an OData request as selected fields:
 
 <tab category="content-management" article="list-fields" example="selectByListField" />
 
 ## List expando fields defined on a specified list
 
-sensenet lets you get the list of the custom fields added to an individual custom list requesting its [metadata](/api-docs/basic-concepts/metadata). Following request returns the Service Metadata Document of the specified instance that exposes the data model of the service in XML or JSON:
+sensenet lets you get the list of the custom fields added to an individual custom list requesting its [metadata](/api-docs/basic-concepts/metadata). Following request returns the Service Metadata Document of the specified instance that exposes the data model of the service in XML or JSON format:
 
 <tab category="content-management" article="list-fields" example="metadata" />
 
