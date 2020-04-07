@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import config from '../../../config';
 import TreeNode from './treeNode';
 
+typeof window !== 'undefined' && window.location
+
 const calculateTreeData = edges => {
   const originalData = config.sidebar.ignoreIndex ? edges.filter(({node: {fields: {slug}}}) => slug !== '/') : edges;
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
