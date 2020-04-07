@@ -8,6 +8,21 @@ import RightSidebar from "./rightSidebar";
 import LanguageMenu from './languageMenu';
 import {LanguageContext} from '../context/LanguageContext'
 
+if (typeof window === 'undefined') {
+  global.window = {
+    location: {
+      href: ''
+    }
+  }
+}
+
+if (typeof localStorage === 'undefined') {
+  global.localStorage = {
+    setItem: () => {},
+    getItem: () => {}
+  }
+}
+
 const Wrapper = styled('div')`
   display: flex;
   justify-content: space-between;
