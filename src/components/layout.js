@@ -18,6 +18,8 @@ if (typeof window === 'undefined') {
 
 if (typeof localStorage === 'undefined') {
   global.localStorage = {
+    setItem: () => {},
+    getItem: () => {}
   }
 }
 
