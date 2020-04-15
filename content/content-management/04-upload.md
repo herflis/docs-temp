@@ -14,8 +14,8 @@ You can upload a stream or text to a content binary field (e.g. a file) with the
 | Overwrite| boolean, optional, default value is `True` | determines whether the upload action should overwrite a content if it already exist with the same name. If false, a new file will be created with a similar name containing an incremental number (e.g. sample(2).docx). |
 | UseChunk | boolean, optional, used in the first request, default is `False` | determines whether the system should start a chunk upload process instead of saving the file in one round. Usually this is determined by the size of the file.|
 | PropertyName | string, optional, default value is 'Binary' | appoints the binary field of the content where the data should be saved. |
-| ChunkToken | string, required only in the second request | the response of first request returns this token. It must be posted in all of the subsequent requests without modification. It is used for executing the chunk upload operation. |
-| FileText | | in case you do not have the file as a real file in the file system but a text in the browser, you can provide the raw text in this parameter.
+| ChunkToken | string, required only in the second request | the response of the first request returns this token. It must be posted in all of the subsequent requests without modification. It is used for executing the chunk upload operation. |
+| FileText | string, optional | in case you do not have the file as a real file in the file system but a text in the browser, you can provide the raw text in this parameter.
 
 # Initial request
 
@@ -23,7 +23,7 @@ The first request is a create request that tells the system whether it should cr
 
 # Subsequent requests
 
-The first request returns with an upload token that contains essential information for the upload process. You have to pass this data to subsequent requests without modification. If you declared in the first request that this will be a chunk upload, you have to specify the offset (Content-Range header) and the actual binary chunk in subsequent requests - otherwise you'll post the whole file in one round.
+The first request returns an upload token that contains essential information for the upload process. You have to pass this data to subsequent requests without modification. If you declared in the first request that this will be a chunk upload, you have to specify the offset (`Content-Range` header) and the actual binary chunk in subsequent requests - otherwise you'll post the whole file in one round.
 
 # Content versioning
 
@@ -41,7 +41,7 @@ If the existing content is checked out by the current user, that version will be
 
 # Upload a file
 
-Next example shows how to upload a file in two steps with two requests.
+The next example shows how to upload a file in two steps with two requests.
 The first response will be `5062*3196*True` (or similar). This value must be passed to the second requests `ChunkToken`.
 
 <tab category="content-management" article="upload" example="uploadFile" />
@@ -66,7 +66,7 @@ Following examples shows how to create a simple text file adding its raw text (t
 
 If the files are small, you may upload the whole file in one round instead of chunks. In the initial request you can set the UseChunk parameter to false and send the whole file in the next request. It is possible to avoid the initial request. In this case you have to send the whole file and the necessary parameters according to the second request specification (see the OData action article for more info). The chunk token in this case needs to be the following `0*0*False`.
 
-Following example shows you how the whole request looks in this case:
+Following example shows you how the whole request looks like in this case:
 
 <tab category="content-management" article="upload" example="uploadFileNoChunks" />
 
@@ -76,7 +76,7 @@ Following example shows you how the whole request looks in this case:
 
 # Interrupted uploads
 
-If the upload process was interrupted, the database may contain a partially uploaded file. If the file existed before the upload operation, you can simply revert to the previous version by choosing the Undo changes action. Partially uploaded new files can only be deleted. If you try to upload the file again, the upload process will be restarted and the whole file will be uploaded again from the beginning. It is only possible to continue a previously interrupted upload process if you have the chunk token received from the first request and know the exact position where the upload process stopped. sensenet offers a possibility to resume a previously interrupted upload process.
+If the upload process was interrupted, the database may contain a partially uploaded file. If the file existed before the upload operation, you can simply revert to the previous version by choosing the Undo changes action. Partially uploaded new files can only be deleted. If you try to upload the file again, the upload process will be restarted and the whole file will be uploaded again from the beginning. It is only possible to continue a previously interrupted upload process if you have the **chunk token** received from the first request and know the exact position where the upload process stopped. sensenet offers a possibility to resume a previously interrupted upload process.
 
 // TODO ->
 
