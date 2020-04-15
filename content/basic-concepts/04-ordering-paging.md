@@ -58,6 +58,6 @@ With the `$top` option you can limit collection results.
 
 In case of paging the `$top` option defines the maximum number of documents that the API will return for your query so that the number of docs that will be listed on a page and `$skip` defines how many docs will be skipped.
 
-Following example demonstrates how to query the second page of a folder list with 3 folder on a page.
+Following example demonstrates how to query the second page of a folder list with 3 folders on a page.
 
 <tab category="basic-concepts" article="ordering-paging" example="paging" />

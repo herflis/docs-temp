@@ -4,7 +4,7 @@ metaTitle: "sensenet API - Delete content"
 metaDescription: "How to delete content"
 ---
 
-Deleting a content is an http `DELETE` request under the hood. You can call it with defining the content that you want to delete and setting whether the deleted item should be first moved to the trash or be deleted immediately. These `DELETE` request will return a json something similar like the following. It contains number of deleted items, basic info about the deleted item(s) and if some of the given contents cannot be deleted for some reason, there will be error messages listed in the `errors` array:
+Deleting a content is an http `DELETE` request under the hood. You can call it by defining the content that you want to delete and setting whether the deleted item should be first moved to the trash or be deleted immediately. These `DELETE` requests will return a JSON similar to the following. It contains the number of deleted items, basic info about the deleted item(s) and if some of the given contents cannot be deleted for some reason, there will be error messages listed in the `errors` array:
 
 ```json
 {
@@ -24,7 +24,7 @@ Deleting a content is an http `DELETE` request under the hood. You can call it w
 
 ## Delete a single content
 
-Following example shows you how to delete a folder:
+The following example shows you how to delete a folder:
 
 <tab category="content-management" article="delete" example="deleteContent" />
 
