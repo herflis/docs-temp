@@ -16,7 +16,7 @@ Following example results the list of content types that are allowed effectively
 
 <tab category="content-management" article="allowed-childtypes" example="effectivelyAllowed" />
 
-## Get chidtypes allowed on a content
+## Get childtypes allowed on a content
 
 This next example returns with the list of content types allowed directly on the given content:
 

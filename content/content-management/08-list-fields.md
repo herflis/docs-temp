@@ -25,7 +25,7 @@ Lets see a json response of a requested list item with an expando field:
 }
 ```
 
-Following example shows how to use expando fieldss in an OData request as selected field:
+Following example shows how to use expando fields in an OData request as selected field:
 
 <tab category="content-management" article="list-fields" example="selectByListField" />
 
