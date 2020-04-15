@@ -1,7 +1,7 @@
 ---
 title: Update
 metaTitle: "sensenet API - Update a content"
-metaDescription: "How to update an exisisting content"
+metaDescription: "How to update an existing content"
 ---
 
 Updating a content could be achieved by sending an http `PATCH` or `PUT` request. You can call it by identifying the content that should be updated (this will be the path where you'll send the request), and adding an object with the fields and values that you want to update (this object will be sent in the request body). Both `PATCH` and `PUT` requests will return the updated content object in JSON.

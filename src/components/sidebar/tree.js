@@ -2,6 +2,15 @@ import React, {useState} from 'react';
 import config from '../../../config';
 import TreeNode from './treeNode';
 
+
+if (typeof window === 'undefined') {
+  global.window = {
+    location: {
+      href: ''
+    }
+  }
+}
+
 const calculateTreeData = edges => {
   const originalData = config.sidebar.ignoreIndex ? edges.filter(({node: {fields: {slug}}}) => slug !== '/') : edges;
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
@@ -83,6 +92,7 @@ const Tree = ({edges}) => {
     }
   });
   treeData.items.forEach(item => {
+
     const url = window.location.href.replace(/^.*\/\/[^\/]+/, '')
     if(url.includes(item.url)){
       defaultCollapsed[item.url] = false;
@@ -92,7 +102,9 @@ const Tree = ({edges}) => {
     }
   })
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
+
   treeData.items.forEach(item => {
+
     const url = window.location.href.replace(/^.*\/\/[^\/]+/, '')
     if(url.includes(item.url)){
       collapsed[item.url] = false;

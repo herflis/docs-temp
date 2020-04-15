@@ -18,7 +18,7 @@ In this case the URL must satisfy a strict rule: the service path followed by `/
 
 # Get a single content by Path
 
-In this case the URL is the service path followed by the path of the parent and an entity name wrapped by aposthrophes and parentheses.
+In this case the URL is the service path followed by the path of the parent and an entity name wrapped by apostrophes and parentheses.
 
 <tab category="basic-concepts" article="entry" example="byPath" />
 
