@@ -14,7 +14,7 @@ First let's change the index of a workspace to 142:
 
 # Modifying multiple fields at once
 
-Following example shows you how you can change a folders name and index fields at once:
+Following example shows how you can change a folders name and index fields at once:
 
 <tab category="content-management" article="update" example="updateMultipleFields" />
 
