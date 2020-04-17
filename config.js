@@ -1,6 +1,6 @@
 const config = {
 	"gatsby": {
-		"pathPrefix": "/",
+		"pathPrefix": "/api-docs",
 		"siteUrl": "https://docs.sensenet.com",
 		"gaTrackingId": null
 	},
