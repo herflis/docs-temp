@@ -97,7 +97,7 @@ const Header = ({location}) => (
                   if(link.link !== '' && link.text !== '') {
                     return(
                       <li key={key}>
-                        <a className="sidebarLink" href={link.link} target="_blank" rel="noopener" dangerouslySetInnerHTML={{__html: link.text}} />
+                        <a className="sidebarLink" href={link.link} rel="noopener" dangerouslySetInnerHTML={{__html: link.text}} />
                       </li>
                     );
                   }

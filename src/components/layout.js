@@ -60,7 +60,6 @@ const RightSideBarWidth = styled('div')`
 `;
 const Layout = ({ children, location }) => {
 
-
   const toggleLanguage = (lang) => {
     if (typeof window != 'undefined') {
       localStorage.setItem('chosenLanguage', lang)

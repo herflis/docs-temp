@@ -1,6 +1,6 @@
 const config = {
 	"gatsby": {
-		"pathPrefix": "/api-docs",
+		"pathPrefix": "/",
 		"siteUrl": "https://docs.sensenet.com",
 		"gaTrackingId": null
 	},
@@ -12,12 +12,12 @@ const config = {
 		"helpUrl": "https://gitter.im/SenseNet/sensenet",
 		"tweetText": "Check out the sensenet docs for developers by @sensenet https://docs.sensenet.com",
 		"links": [
-      { "text": "API Docs", "link": "/"},
-      { "text": "Example Apps", "link": "/"},
-      { "text": "Tutorials", "link": "/"},
-      { "text": "Concepts", "link": "/"},
-      { "text": "Admin-ui Guides", "link": "/"},
-      { "text": "Integrations", "link": "/"}
+      { "text": "API Docs", "link": "/api-docs/basic-concepts"},
+      { "text": "Example Apps", "link": "/examples"},
+      { "text": "Tutorials", "link": "/tutorials"},
+      { "text": "Concepts", "link": "/concepts/index"},
+      { "text": "Admin-ui Guides", "link": "/guides"},
+      { "text": "Integrations", "link": "/integrations"}
 		],
 		"search": {
 			"enabled": false,
@@ -28,32 +28,13 @@ const config = {
 		}
 	},
 	"sidebar": {
-		"forcedNavOrder": [
-      "/basic-concepts",
-      "/querying",
-      "/content-management",
-      "/collaboration",
-      "/users-and-groups",
-      "/permissions",
-      "/sharing",
-      "/preview"
-    ],
-    "collapsedNav": [
-      "/querying",
-      "/content-management",
-      "/collaboration",
-      "/users-and-groups",
-      "/permissions",
-      "/sharing",
-      "/preview"
-    ],
 		"links": [
       { "text": "Contact", "link": "https://sensenet.com/contact"},
       { "text": "Blog", "link": "https://blog.sensenet.com"},
       { "text": "Community", "link": "https://community.sensenet.com"},
       { "text": "Careers", "link": "https://jobs.sensenet.com"},
 		],
-		"frontline": true,
+		"frontline": false,
 		"ignoreIndex": true,
 	},
 	"siteMetadata": {
