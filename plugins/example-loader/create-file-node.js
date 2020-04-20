@@ -28,26 +28,6 @@ exports.createFileNode = async (
 
   let internal
 
-  // let nodeData
-
-  // const processTextContent = (text) => {
-  // //   const nodeContent = JSON.stringify(content)
-  //   console.log('zzz')
-  //   console.log(text)
-  //   const str = isString(text) ? text : ` `
-  //   // const nodeData = Object.assign({}, content, {
-  //   //   id: `${content.Id}`,
-  //   //   parent: `${nodeContent.parentId}`,
-  //   //   children: [],
-  //   //   internal: {
-  //   //     type: `SN${content.Type}Markdown`,
-  //   //     content: str,
-  //   //     mediaType: `text/markdown`,
-  //   //     contentDigest: createContentDigest(str),
-  //   //   },
-  //   // })
-  //   return str
-  // }
 
   if (stats.isDirectory()) {
     const contentDigest = createContentDigest({
@@ -62,12 +42,6 @@ exports.createFileNode = async (
   } else {
 
     const content = await fs.readFile(slashedFile.absolutePath, 'utf8')
-    // .then((content) => {
-
-    //   console.log('xxx')
-    //   console.log(content)
-    //   return processTextContent(stats, content)
-    // })
 
     const contentDigest = await md5File(slashedFile.absolutePath)
     const mediaType = mime.getType(slashedFile.ext)

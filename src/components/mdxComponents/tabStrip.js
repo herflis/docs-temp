@@ -114,10 +114,12 @@ const TabStrip = (props) => {
           textColor="primary"
           orientation="vertical"
           variant="scrollable"
-          className={classes.tabs}
+          style={{borderRight: `1px solid ${theme.palette.divider}`}}
         >
             { langs.map((lang, index) =>{
-               return <Tab className={classes.tab} disableRipple label={lang.title} {...a11yProps(lang.name)} key={`${lang.name}-tab`} />
+               return <Tab style={{minWidth: '120px',
+               fontSize: '0.775rem',
+               minHeight: '40px'}} disableRipple label={lang.title} {...a11yProps(lang.name)} key={`${lang.name}-tab`} />
               }
                )
           }

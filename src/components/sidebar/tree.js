@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import config from '../../../config';
+import sideMenuConfig from '../../../sidemenuConfig';
 import TreeNode from './treeNode';
 
 
@@ -11,8 +12,12 @@ if (typeof window === 'undefined') {
   }
 }
 
-const calculateTreeData = edges => {
-  const originalData = config.sidebar.ignoreIndex ? edges.filter(({node: {fields: {slug}}}) => slug !== '/') : edges;
+const calculateTreeData = (edges, l) => {
+  const originalData = config.sidebar.ignoreIndex ?
+  edges.filter(({node: {fields: {slug}}}) => slug !== '/' && !slug.split('/').length < 3 && slug.includes(l.split('/')[1]) && !slug.includes(`-${l.split('/')[1]}`)) : edges;
+
+  edges.filter(({node: {fields: {slug}}}) => slug !== l.split('/')[1])
+
   const tree = originalData.reduce((accu, {node: {fields: {slug, title}}}) => {
     const parts = slug.split('/');
     let {items: prevItems} = accu;
@@ -42,7 +47,7 @@ const calculateTreeData = edges => {
     }
     return accu;
   }, {items: []});
-  const {sidebar: {forcedNavOrder = []}} = config;
+  const {forcedNavOrder = []} = sideMenuConfig[getConfigNameByLocation(l)];
   const tmp = [...forcedNavOrder];
   tmp.reverse();
   return tmp.reduce((accu, slug) => {
@@ -56,7 +61,7 @@ const calculateTreeData = edges => {
         }
       } else {
         tmp = {label: part, items: []};
-        prevItems.push(tmp)
+          prevItems.push(tmp)
       }
       prevItems = tmp.items;
     }
@@ -78,14 +83,15 @@ const calculateTreeData = edges => {
 }
 
 
-const Tree = ({edges}) => {
+const Tree = ({edges, location}) => {
 
   const [treeData] = useState(() => {
-    return calculateTreeData(edges);
+    return calculateTreeData(edges, location);
   });
   const defaultCollapsed = {};
+
   treeData.items.forEach(item => {
-    if (config.sidebar.collapsedNav && config.sidebar.collapsedNav.includes(item.url)) {
+    if (sideMenuConfig[getConfigNameByLocation(location)].collapsedNav && sideMenuConfig[getConfigNameByLocation(location)].collapsedNav.includes(item.url)) {
       defaultCollapsed[item.url] = true;
     } else {
       defaultCollapsed[item.url] = false;
@@ -113,6 +119,8 @@ const Tree = ({edges}) => {
       collapsed[item.url] = true;
     }
   })
+  treeData.items.filter(t => t.label !== location.split('/')[1])
+
   const toggle = (url) => {
     setCollapsed({
       ...collapsed,
@@ -125,6 +133,7 @@ const Tree = ({edges}) => {
       className={`${config.sidebar.frontline ? 'showFrontLine' : 'hideFrontLine'} firstLevel`}
       setCollapsed={toggle}
       collapsed={collapsed}
+      path={location}
       {...treeData}
 
     />
@@ -132,3 +141,16 @@ const Tree = ({edges}) => {
 }
 
 export default Tree
+
+
+const getConfigNameByLocation = (location) => {
+  let c = ''
+  if (location.split('/')[1]  === 'api-docs'){
+      c = 'apiDocs'
+    } else if(location.split('/')[1]  === 'concepts') {
+      c = 'concepts'
+    } else {
+      c = 'apiDocs'
+  }
+  return c
+}
