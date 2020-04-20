@@ -79,7 +79,7 @@ const Header = ({location}) => (
       const finalLogoLink = logo.link !== '' ? logo.link : '/';
       return (
         <div className={'navBarWrapper'}>
-          <nav className={'navBarDefault'}>
+          <nav className={location.pathname.includes('api-docs') ? 'navBarDefault' : 'navBarWithShadow'}>
             <div className={'navBarHeader'}>
               <Link to={finalLogoLink} className={'navBarBrand'}>
                 <img className={'img-responsive displayInline'} src={Logo} alt={'logo'} />

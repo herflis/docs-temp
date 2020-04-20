@@ -13,11 +13,11 @@ const config = {
 		"tweetText": "Check out the sensenet docs for developers by @sensenet https://docs.sensenet.com",
 		"links": [
       { "text": "API Docs", "link": "/api-docs/basic-concepts"},
-      { "text": "Example Apps", "link": "/examples"},
-      { "text": "Tutorials", "link": "/tutorials"},
+      { "text": "Example Apps", "link": "/examples-apps/index"},
+      { "text": "Tutorials", "link": "/tutorials/index"},
       { "text": "Concepts", "link": "/concepts/index"},
-      { "text": "Admin-ui Guides", "link": "/guides"},
-      { "text": "Integrations", "link": "/integrations"}
+      { "text": "Admin-ui Guides", "link": "/guides/index"},
+      { "text": "Integrations", "link": "/integrations/index"}
 		],
 		"search": {
 			"enabled": false,
