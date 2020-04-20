@@ -6,10 +6,12 @@ import styled from "@emotion/styled";
 import { Layout, Link } from "../components";
 import NextPrevious from '../components/NextPrevious';
 import '../components/styles.css';
-import config from '../../config';
+import config from '../../config'
+import sideMenuConfig from '../../sidemenuConfig';
 import langs from '../components/mdxComponents/langs';
 
-const forcedNavOrder = config.sidebar.forcedNavOrder;
+
+const forcedNavOrder = sideMenuConfig.apiDocs.forcedNavOrder;
 
 const Edit = styled('div')`
   padding: 1rem 1.5rem;
@@ -87,7 +89,6 @@ export default class MDXRuntimeTest extends Component {
           return { title: node.fields.title, url: node.fields.slug };
         }
       });
-
     // meta tags
     const metaTitle = mdx.frontmatter.metaTitle;
     const metaDescription = mdx.frontmatter.metaDescription;

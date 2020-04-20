@@ -5,8 +5,7 @@ import styled from "@emotion/styled";
 import {ExternalLink} from "react-feather";
 import '../styles.css';
 import config from '../../../config';
-
-const forcedNavOrder = config.sidebar.forcedNavOrder;
+import sideMenuConfig from '../../../sidemenuConfig'
 
 // eslint-disable-next-line no-unused-vars
 const ListItem = styled(({ className, active, level, ...props }) => {
@@ -129,6 +128,7 @@ const SidebarLayout = ({location}) => (
         <Sidebar>
           <ul className={'sideBarUL'}>
             <Tree
+              location={location.pathname}
               edges={allMdx.edges}
             />
             <Divider />
@@ -150,3 +150,4 @@ const SidebarLayout = ({location}) => (
 );
 
 export default SidebarLayout;
+

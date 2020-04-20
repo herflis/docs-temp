@@ -79,7 +79,7 @@ const Header = ({location}) => (
       const finalLogoLink = logo.link !== '' ? logo.link : '/';
       return (
         <div className={'navBarWrapper'}>
-          <nav className={'navBarDefault'}>
+          <nav className={location.pathname.includes('api-docs') ? 'navBarDefault' : 'navBarWithShadow'}>
             <div className={'navBarHeader'}>
               <Link to={finalLogoLink} className={'navBarBrand'}>
                 <img className={'img-responsive displayInline'} src={Logo} alt={'logo'} />
@@ -97,13 +97,13 @@ const Header = ({location}) => (
                   if(link.link !== '' && link.text !== '') {
                     return(
                       <li key={key}>
-                        <a className="sidebarLink" href={link.link} target="_blank" rel="noopener" dangerouslySetInnerHTML={{__html: link.text}} />
+                        <a className="sidebarLink" href={link.link} rel="noopener" dangerouslySetInnerHTML={{__html: link.text}} />
                       </li>
                     );
                   }
                 })}
                 {helpUrl !== '' ?
-                  (<li><a href={helpUrl}><FontAwesomeIcon icon={faGitter} /></a></li>) : null
+                  (<li><a href={helpUrl}><FontAwesomeIcon style={{width: '20px'}} icon={faGitter} /></a></li>) : null
                 }
                 {(tweetText !== '' || githubUrl !== '') ?
                   (<li className="divider hiddenMobile"></li>): null
@@ -111,7 +111,7 @@ const Header = ({location}) => (
                 {tweetText !== '' ?
                   (<li>
                     <a href={'https://twitter.com/intent/tweet?&text=' + tweetText} target="_blank" rel="noopener">
-                    <FontAwesomeIcon icon={faTwitter} />
+                    <FontAwesomeIcon style={{width: '20px', height: '20px'}} icon={faTwitter} />
                     </a>
                    </li>) : null
                 }

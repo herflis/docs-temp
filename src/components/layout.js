@@ -52,6 +52,7 @@ const MaxWidth = styled('div')`
     position: relative;
   }
 `;
+
 const LeftSideBarWidth = styled('div')`
   width: 298px;
 `;
@@ -59,7 +60,6 @@ const RightSideBarWidth = styled('div')`
   width: 224px;
 `;
 const Layout = ({ children, location }) => {
-
 
   const toggleLanguage = (lang) => {
     if (typeof window != 'undefined') {
@@ -77,9 +77,10 @@ const Layout = ({ children, location }) => {
     toggleLanguage: toggleLanguage,
   });
 
-  return (
-  <ThemeProvider location={location}>
-    <MDXProvider components={mdxComponents}>
+  let container
+
+  if(location.pathname.includes('api-docs')){
+    container = <MDXProvider components={mdxComponents}>
     <LanguageContext.Provider value={state}>
       <LanguageMenu />
       <Wrapper>
@@ -94,7 +95,28 @@ const Layout = ({ children, location }) => {
         </RightSideBarWidth>
       </Wrapper>
       </LanguageContext.Provider>
+      }
     </MDXProvider>
+  }  else {
+    container = <MDXProvider components={mdxComponents}>
+      <Wrapper>
+        <LeftSideBarWidth className={'hiddenMobile leftSideBar'}>
+          <Sidebar location={location} />
+        </LeftSideBarWidth>
+        <Content>
+          <MaxWidth>{children}</MaxWidth>
+        </Content>
+        <RightSideBarWidth className={'hiddenMobile'}>
+          <RightSidebar location={location} />
+        </RightSideBarWidth>
+      </Wrapper>
+      }
+    </MDXProvider>
+  }
+
+  return (
+  <ThemeProvider location={location}>
+    {container}
   </ThemeProvider>
 )};
 

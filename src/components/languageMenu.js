@@ -96,7 +96,24 @@ const LanguageMenu = (props) => {
           return <LanguageContext.Consumer key={`langMenu-${l.name}`}>
             {({lang, toggleLanguage}) => {
               return (
-              <Button color="inherit" className={isActive(lang, l.name) ? classes.active : classes.button} onClick={() => toggleLanguage(l.name)}>
+              <Button color="inherit" style={isActive(lang, l.name) ?
+                {
+                  borderRight: 'solid 1px #eee',
+                  borderRadius: '0px',
+                  padding: '10px 20px',
+                  fontWeight: 'normal',
+                  textTransform: 'none',
+                  background: '#fff',
+                  minHeight: '64px',
+                } :
+                {
+                  borderRight: 'solid 1px #eee',
+                  borderRadius: '0px',
+                  padding: '10px 20px',
+                  fontWeight: 'normal',
+                  textTransform: 'none',
+                  minHeight: '64px'
+                }} onClick={() => toggleLanguage(l.name)}>
                 {icon(lang, l.name)}
                 {l.title}
               </Button>

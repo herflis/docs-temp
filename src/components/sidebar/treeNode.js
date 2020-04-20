@@ -5,7 +5,7 @@ import config from '../../../config';
 import Link from "../link";
 import langs from "../mdxComponents/langs";
 
-const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, ...rest}) => {
+const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, path, ...rest}) => {
   const isCollapsed = collapsed[url];
   const collapse = () => {
     setCollapsed(url)
@@ -41,7 +41,9 @@ const TreeNode = ({className = '', setCollapsed, collapsed, url, title, items, .
 
       {!isCollapsed && hasChildren ? (
         <ul>
-          {items.map((item) =>{
+          {items
+          .filter(item => !item.url || !item.url.includes('/index'))
+          .map((item) =>{
             if(item.url === undefined || !isExampleNode(item.url)){
            return (
             <TreeNode
