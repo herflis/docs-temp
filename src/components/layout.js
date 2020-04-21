@@ -97,7 +97,20 @@ const Layout = ({ children, location }) => {
       </LanguageContext.Provider>
       }
     </MDXProvider>
-  }  else {
+  }
+  else if(location.pathname.includes('example-apps') || location.pathname.includes('integrations') || location.pathname.includes('guides') || location.pathname.includes('tutorials')) {
+    container = <MDXProvider components={mdxComponents}>
+    <Wrapper>
+      <Content>
+        <MaxWidth>{children}</MaxWidth>
+      </Content>
+      <RightSideBarWidth className={'hiddenMobile'}>
+        <RightSidebar location={location} />
+      </RightSideBarWidth>
+    </Wrapper>
+    }
+  </MDXProvider>
+  } else {
     container = <MDXProvider components={mdxComponents}>
       <Wrapper>
         <LeftSideBarWidth className={'hiddenMobile leftSideBar'}>

@@ -13,7 +13,7 @@ const config = {
 		"tweetText": "Check out the sensenet docs for developers by @sensenet https://docs.sensenet.com",
 		"links": [
       { "text": "API Docs", "link": "/api-docs/basic-concepts"},
-      { "text": "Example Apps", "link": "/examples-apps/index"},
+      { "text": "Example Apps", "link": "/example-apps/index"},
       { "text": "Tutorials", "link": "/tutorials/index"},
       { "text": "Concepts", "link": "/concepts/index"},
       { "text": "Admin-ui Guides", "link": "/guides/index"},
