@@ -54,7 +54,7 @@ const calculateTreeData = (edges, l) => {
     const parts = slug.split('/');
     let {items: prevItems} = accu;
     for (const part of parts.slice(1, -1)) {
-      let tmp = prevItems.find(({label}) => label == part);
+      let tmp = prevItems.find((pI) => pI && pI.label == part);
       if (tmp) {
         if (!tmp.items) {
           tmp.items = [];
@@ -86,7 +86,11 @@ const calculateTreeData = (edges, l) => {
 const Tree = ({edges, location}) => {
 
   const [treeData] = useState(() => {
-    return calculateTreeData(edges, location);
+    if(['api-docs', 'concepts'].some(element => location.includes(element))){
+      return calculateTreeData(edges, location);
+    } else {
+      return { items: []};
+    }
   });
   const defaultCollapsed = {};
 
