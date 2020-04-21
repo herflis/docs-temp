@@ -8,7 +8,7 @@ const SearchBar = () => {
     <div className="SearchContainer">
       <div className="BorderedContainer">
         <FontAwesomeIcon style={{width: '20px', color: "#555"}} icon={faSearch} />
-        <input className="SearchInput" placeHolder="Search documentation" />
+        <input className="SearchInput" placeholder="Search documentation" />
       </div>
     </div>
   )
